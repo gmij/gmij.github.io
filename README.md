@@ -14,6 +14,6 @@
 
 目前自己在主层的开源项目（github）：
 [DynamicWallpaper](https://github.com/gmij/DynamicWallpaper)
-【[v0.4](/dynamicwallpaper/v0.4/DynamicWallpaper.Setup.msi)】
+【[v0.4](/DynamicWallpaper/v0.4/DynamicWallpaper.Setup.msi)】
 
 
