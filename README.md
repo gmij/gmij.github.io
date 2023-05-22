@@ -12,7 +12,7 @@
 目前参与贡献的开源项目（github）:
 [dotnetcore/smartsql](https://github.com/dotnetcore/SmartSql)、[ant-design-blazor](https://github.com/ant-design-blazor/ant-design-blazor)
 
-目前自己在主层的开源项目（github）：
+目前自己在主导的开源项目（github）：
 [DynamicWallpaper](https://github.com/gmij/DynamicWallpaper)
 【[v0.4](/DynamicWallpaper/v0.4/DynamicWallpaper.Setup.msi)】
 
