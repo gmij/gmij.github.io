@@ -13,10 +13,11 @@
 [dotnetcore/smartsql](https://github.com/dotnetcore/SmartSql)、[ant-design-blazor](https://github.com/ant-design-blazor/ant-design-blazor)
 
 目前自己在主导的开源项目（github）：
-[DynamicWallpaper](https://github.com/gmij/DynamicWallpaper)
+[DynamicWallpaper](https://github.com/gmij/DynamicWallpaper) 
 
-【[v0.4](/DynamicWallpaper/v0.4/DynamicWallpaper.Setup.msi)】
-
+## 最新版本
 【[v0.5](/DynamicWallpaper/v0.5/DynamicWallpaper.Setup.msi)】
 
+## 历史版本
+【[v0.4](/DynamicWallpaper/v0.4/DynamicWallpaper.Setup.msi)】
 
