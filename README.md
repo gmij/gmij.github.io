@@ -16,9 +16,10 @@
 [DynamicWallpaper](https://github.com/gmij/DynamicWallpaper) 
 
 ## 最新版本
-【[v0.6](/DynamicWallpaper/v0.6/DynamicWallpaper.Setup_SIGN.msi)】
+【[v0.7](/DynamicWallpaper/v0.7/DynamicWallpaper.Setup_SIGN.msi)】
 
 ## 历史版本
+【[v0.6](/DynamicWallpaper/v0.6/DynamicWallpaper.Setup_SIGN.msi)】
 【[v0.5](/DynamicWallpaper/v0.5/DynamicWallpaper.Setup_SIGN.msi)】
 【[v0.4](/DynamicWallpaper/v0.4/DynamicWallpaper.Setup.msi)】
 
