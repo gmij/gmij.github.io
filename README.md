@@ -15,9 +15,10 @@
 目前自己在主导的开源项目（github）：
 [DynamicWallpaper](https://github.com/gmij/DynamicWallpaper)  =====>>  [壁纸墙](https://dw.gmij.win)
 
-[Audio3A_CSharp](https://github.com/gmij/Audio3A_CSharp)
+[Audio3A_CSharp](https://github.com/gmij/Audio3A_CSharp) =====>> 一个完全由AI编写的.NET原生音频3A处理SDK
 
-[绿色软件下载站](https://gmij.win/soft) 
+[绿色软件下载站](https://gmij.win/soft/)  =====>> 一个完全由AI编写的资源下载站
+
 
 
 
