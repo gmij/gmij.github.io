@@ -17,7 +17,8 @@
 
 [Audio3A_CSharp](https://github.com/gmij/Audio3A_CSharp)
 
-[绿色软件下载站](https://github.com/gmij/soft) =====>> [绿色软件下载站](https://gmij.win/soft)
+[绿色软件下载站](https://gmij.win/soft) 
+
 
 
 
