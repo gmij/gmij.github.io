@@ -15,11 +15,9 @@
 目前自己在主导的开源项目（github）：
 [DynamicWallpaper](https://github.com/gmij/DynamicWallpaper)  =====>>  [壁纸墙](https://dw.gmij.win)
 
-## 最新版本
-【[v0.7](/DynamicWallpaper/v0.7/DynamicWallpaper.Setup_SIGN.msi)】
+[Audio3A_CSharp](https://github.com/gmij/Audio3A_CSharp)
 
-## 历史版本
-【[v0.6](/DynamicWallpaper/v0.6/DynamicWallpaper.Setup_SIGN.msi)】
-【[v0.5](/DynamicWallpaper/v0.5/DynamicWallpaper.Setup_SIGN.msi)】
-【[v0.4](/DynamicWallpaper/v0.4/DynamicWallpaper.Setup.msi)】
+[绿色软件下载站](https://github.com/gmij/soft) =====>> [绿色软件下载站](https://gmij.win/soft)
+
+
 
