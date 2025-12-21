@@ -552,8 +552,14 @@
     </footer>
 
     <script>
-        // Language switcher
-        let currentLang = 'zh';
+        // Language switcher - detect browser language
+        function getBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            // Check if browser language starts with 'zh' (zh, zh-CN, zh-TW, etc.)
+            return browserLang.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+        }
+        
+        let currentLang = getBrowserLanguage();
         
         function toggleLanguage() {
             currentLang = currentLang === 'zh' ? 'en' : 'zh';
