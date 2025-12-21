@@ -126,10 +126,19 @@
             font-weight: 700;
             margin-bottom: 20px;
             letter-spacing: -1px;
+            color: var(--text-primary);
             background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+        
+        /* Fallback for browsers that don't support background-clip */
+        @supports not (background-clip: text) {
+            header h1 {
+                color: var(--text-primary);
+                background: none;
+            }
         }
         
         header .tagline {
@@ -442,6 +451,25 @@
             .lang-switcher {
                 top: 15px;
                 right: 15px;
+            }
+        }
+        
+        /* Accessibility - Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .about-item::before {
+                transition: none;
+            }
+            
+            .about-item:hover {
+                transform: none;
             }
         }
     </style>
