@@ -115,22 +115,63 @@
         
         /* Header */
         header {
-            padding: 80px 0 60px;
+            padding: 120px 0 80px;
             text-align: center;
             border-bottom: 1px solid var(--border);
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
         }
         
         header h1 {
-            font-size: 48px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        header p {
-            font-size: 18px;
+        header .tagline {
+            font-size: 24px;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        
+        header .subtitle {
+            font-size: 16px;
             color: var(--text-secondary);
             font-weight: 400;
+            margin-bottom: 40px;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         /* Section */
@@ -157,29 +198,56 @@
         }
         
         .about-item {
-            padding: 24px;
+            padding: 32px 24px;
             background: var(--bg-secondary);
-            border-radius: 8px;
+            border-radius: 12px;
             border: 1px solid var(--border);
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
         }
         
         .about-item:hover {
             border-color: var(--accent);
             box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        
+        .about-item:hover::before {
+            transform: scaleY(1);
         }
         
         .about-item h3 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--text-primary);
+            margin-bottom: 16px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .about-icon {
+            font-size: 28px;
+            line-height: 1;
         }
         
         .about-item p {
             font-size: 15px;
             color: var(--text-secondary);
-            line-height: 1.7;
+            line-height: 1.8;
         }
         
         /* Projects Section */
@@ -330,12 +398,32 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 36px;
+            header {
+                padding: 80px 0 60px;
             }
             
-            header p {
-                font-size: 16px;
+            header h1 {
+                font-size: 42px;
+            }
+            
+            header .tagline {
+                font-size: 18px;
+            }
+            
+            header .subtitle {
+                font-size: 14px;
+            }
+            
+            .stats-bar {
+                gap: 40px;
+            }
+            
+            .stat-number {
+                font-size: 28px;
+            }
+            
+            .stat-label {
+                font-size: 12px;
             }
             
             h2 {
@@ -349,6 +437,11 @@
             
             section {
                 padding: 48px 0;
+            }
+            
+            .lang-switcher {
+                top: 15px;
+                right: 15px;
             }
         }
     </style>
@@ -365,8 +458,28 @@
     <header>
         <div class="container">
             <h1>GMIJ</h1>
-            <p lang="zh" class="active-zh">全栈工程师 · 开源贡献者 · 技术管理专家</p>
-            <p lang="en" class="active-en">Full Stack Engineer · Open Source Contributor · Tech Lead</p>
+            <p class="tagline" lang="zh">从代码到管理，从0到1的实战专家</p>
+            <p class="tagline" lang="en">From Code to Leadership, 0-to-1 Expert</p>
+            <p class="subtitle" lang="zh">全栈工程师 · 开源贡献者 · 技术管理专家</p>
+            <p class="subtitle" lang="en">Full Stack Engineer · Open Source Contributor · Tech Lead</p>
+            
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label" lang="zh">年研发经验</span>
+                    <span class="stat-label" lang="en">Years Dev</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label" lang="zh">年管理经验</span>
+                    <span class="stat-label" lang="en">Years Lead</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20X</span>
+                    <span class="stat-label" lang="zh">营收增长</span>
+                    <span class="stat-label" lang="en">Revenue Growth</span>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -376,24 +489,24 @@
             <h2 lang="en" class="active-en">About Me</h2>
             <div class="about-grid">
                 <div class="about-item">
-                    <h3 lang="zh" class="active-zh">研发经验</h3>
-                    <h3 lang="en" class="active-en">Development Experience</h3>
-                    <p lang="zh" class="active-zh">2002年-2017年，15年专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。</p>
-                    <p lang="en" class="active-en">2002-2017, 15 years focused on .NET development as a full stack engineer. Committed to code quality with regular refactoring practices and maintaining high standards.</p>
+                    <h3 lang="zh" class="active-zh"><span class="about-icon">💻</span>研发经验</h3>
+                    <h3 lang="en" class="active-en"><span class="about-icon">💻</span>Development Experience</h3>
+                    <p lang="zh" class="active-zh">2002年-2017年，<strong>15年</strong>专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。</p>
+                    <p lang="en" class="active-en">2002-2017, <strong>15 years</strong> focused on .NET development as a full stack engineer. Committed to code quality with regular refactoring practices and maintaining high standards.</p>
                 </div>
                 
                 <div class="about-item">
-                    <h3 lang="zh" class="active-zh">DevOps专家</h3>
-                    <h3 lang="en" class="active-en">DevOps Expert</h3>
-                    <p lang="zh" class="active-zh">熟练掌握DevOps相关知识，擅长使用TeamCity进行持续构建与持续集成，推动团队自动化与效率提升。</p>
-                    <p lang="en" class="active-en">Proficient in DevOps practices, specializing in continuous integration with TeamCity, driving team automation and efficiency improvements.</p>
+                    <h3 lang="zh" class="active-zh"><span class="about-icon">🚀</span>DevOps专家</h3>
+                    <h3 lang="en" class="active-en"><span class="about-icon">🚀</span>DevOps Expert</h3>
+                    <p lang="zh" class="active-zh">熟练掌握DevOps相关知识，擅长使用<strong>TeamCity</strong>进行持续构建与持续集成，推动团队自动化与效率提升。</p>
+                    <p lang="en" class="active-en">Proficient in DevOps practices, specializing in continuous integration with <strong>TeamCity</strong>, driving team automation and efficiency improvements.</p>
                 </div>
                 
                 <div class="about-item">
-                    <h3 lang="zh" class="active-zh">管理经验</h3>
-                    <h3 lang="en" class="active-en">Management Experience</h3>
-                    <p lang="zh" class="active-zh">2017-2023年，5年管理经验。曾任研发总监（20+团队）、运维总监（70+驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近2000万。</p>
-                    <p lang="en" class="active-en">2017-2023, 5 years of management experience. Served as R&D Director (20+ team) and Operations Director (70+ on-site ops team). Specialized in building teams from scratch, growing annual operations contract value from 1M to nearly 20M CNY.</p>
+                    <h3 lang="zh" class="active-zh"><span class="about-icon">👥</span>管理经验</h3>
+                    <h3 lang="en" class="active-en"><span class="about-icon">👥</span>Management Experience</h3>
+                    <p lang="zh" class="active-zh">2017-2023年，<strong>5年</strong>管理经验。曾任研发总监（<strong>20+</strong>团队）、运维总监（<strong>70+</strong>驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近<strong>2000万</strong>。</p>
+                    <p lang="en" class="active-en">2017-2023, <strong>5 years</strong> of management experience. Served as R&D Director (<strong>20+</strong> team) and Operations Director (<strong>70+</strong> on-site ops team). Specialized in building teams from scratch, growing annual operations contract value from 1M to nearly <strong>20M CNY</strong>.</p>
                 </div>
             </div>
         </div>
