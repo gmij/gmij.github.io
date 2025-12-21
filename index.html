@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者</title>
+    <meta name="title" content="GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者">
+    <meta name="description" content="GMIJ，15年.NET全栈开发经验，5年技术管理经验。专注DevOps、持续集成、团队管理。活跃于SmartSql、Ant Design Blazor等开源项目，主导DynamicWallpaper、Audio3A_CSharp等项目。">
+    <meta name="keywords" content="GMIJ, 全栈工程师, .NET开发, DevOps, 开源项目, SmartSql, Ant Design Blazor, DynamicWallpaper, Audio3A_CSharp, 技术管理, 研发总监">
+    <meta name="author" content="GMIJ">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gmij.win/">
+    <meta property="og:title" content="GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者">
+    <meta property="og:description" content="GMIJ，15年.NET全栈开发经验，5年技术管理经验。专注DevOps、持续集成、团队管理。活跃于SmartSql、Ant Design Blazor等开源项目。">
+    <meta property="og:site_name" content="GMIJ Personal Page">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gmij.win/">
+    <meta name="twitter:title" content="GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者">
+    <meta name="twitter:description" content="GMIJ，15年.NET全栈开发经验，5年技术管理经验。专注DevOps、持续集成、团队管理。">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gmij.win/">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "GMIJ",
+      "url": "https://gmij.win",
+      "jobTitle": "全栈工程师",
+      "description": "15年.NET全栈开发经验，5年技术管理经验",
+      "knowsAbout": [".NET开发", "DevOps", "持续集成", "团队管理", "全栈开发"],
+      "sameAs": [
+        "https://github.com/gmij",
+        "https://github.com/dotnetcore/SmartSql",
+        "https://github.com/ant-design-blazor/ant-design-blazor"
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-primary: #0f1419;
+            --bg-secondary: #1a1f29;
+            --bg-tertiary: #242b38;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent: #3b9eff;
+            --accent-hover: #58a6ff;
+            --border: #30363d;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Language Switcher */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .lang-btn {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        
+        .lang-btn:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--accent);
+        }
+        
+        /* Hide/Show based on language */
+        [lang="zh"]:not(.active-zh),
+        [lang="en"]:not(.active-en) {
+            display: none;
+        }
+        
+        /* Header */
+        header {
+            padding: 120px 0 80px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        
+        header h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Fallback for browsers that don't support background-clip */
+        @supports not (background-clip: text) {
+            header h1 {
+                color: var(--text-primary);
+                background: none;
+            }
+        }
+        
+        header .tagline {
+            font-size: 24px;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        
+        header .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Section */
+        section {
+            padding: 64px 0;
+        }
+        
+        section:not(:last-child) {
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: var(--text-primary);
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .about-item {
+            padding: 32px 24px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-item:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        
+        .about-item:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .about-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .about-icon {
+            font-size: 28px;
+            line-height: 1;
+        }
+        
+        .about-item p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        /* Projects Section */
+        .section-subtitle {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 40px 0 24px;
+            color: var(--text-primary);
+        }
+        
+        .section-subtitle:first-of-type {
+            margin-top: 0;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        
+        .project-card {
+            padding: 24px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .project-card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .project-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .project-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            font-size: 12px;
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        
+        .project-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 14px;
+            color: var(--accent);
+            text-decoration: none;
+            border: 1px solid var(--accent);
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+        }
+        
+        .skill-category h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+        
+        footer p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        footer a:hover {
+            color: var(--accent-hover);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 80px 0 60px;
+            }
+            
+            header h1 {
+                font-size: 42px;
+            }
+            
+            header .tagline {
+                font-size: 18px;
+            }
+            
+            header .subtitle {
+                font-size: 14px;
+            }
+            
+            .stats-bar {
+                gap: 40px;
+            }
+            
+            .stat-number {
+                font-size: 28px;
+            }
+            
+            .stat-label {
+                font-size: 12px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            .about-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 48px 0;
+            }
+            
+            .lang-switcher {
+                top: 15px;
+                right: 15px;
+            }
+        }
+        
+        /* Accessibility - Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .about-item::before {
+                transition: none;
+            }
+            
+            .about-item:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn" onclick="toggleLanguage()">
+            <span lang="zh" class="active-zh">EN</span>
+            <span lang="en" class="active-en">中文</span>
+        </button>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>GMIJ</h1>
+            <p class="tagline" lang="zh">从代码到管理，从0到1的实战专家</p>
+            <p class="tagline" lang="en">From Code to Leadership, 0-to-1 Expert</p>
+            <p class="subtitle" lang="zh">全栈工程师 · 开源贡献者 · 技术管理专家</p>
+            <p class="subtitle" lang="en">Full Stack Engineer · Open Source Contributor · Tech Lead</p>
+            
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label" lang="zh">年研发经验</span>
+                    <span class="stat-label" lang="en">Years Dev</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label" lang="zh">年管理经验</span>
+                    <span class="stat-label" lang="en">Years Lead</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20X</span>
+                    <span class="stat-label" lang="zh">营收增长</span>
+                    <span class="stat-label" lang="en">Revenue Growth</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2 lang="zh" class="active-zh">关于我</h2>
+            <h2 lang="en" class="active-en">About Me</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <h3 lang="zh" class="active-zh"><span class="about-icon">💻</span>研发经验</h3>
+                    <h3 lang="en" class="active-en"><span class="about-icon">💻</span>Development Experience</h3>
+                    <p lang="zh" class="active-zh">2002年-2017年，<strong>15年</strong>专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。</p>
+                    <p lang="en" class="active-en">2002-2017, <strong>15 years</strong> focused on .NET development as a full stack engineer. Committed to code quality with regular refactoring practices and maintaining high standards.</p>
+                </div>
+                
+                <div class="about-item">
+                    <h3 lang="zh" class="active-zh"><span class="about-icon">🚀</span>DevOps专家</h3>
+                    <h3 lang="en" class="active-en"><span class="about-icon">🚀</span>DevOps Expert</h3>
+                    <p lang="zh" class="active-zh">熟练掌握DevOps相关知识，擅长使用<strong>TeamCity</strong>进行持续构建与持续集成，推动团队自动化与效率提升。</p>
+                    <p lang="en" class="active-en">Proficient in DevOps practices, specializing in continuous integration with <strong>TeamCity</strong>, driving team automation and efficiency improvements.</p>
+                </div>
+                
+                <div class="about-item">
+                    <h3 lang="zh" class="active-zh"><span class="about-icon">👥</span>管理经验</h3>
+                    <h3 lang="en" class="active-en"><span class="about-icon">👥</span>Management Experience</h3>
+                    <p lang="zh" class="active-zh">2017-2023年，<strong>5年</strong>管理经验。曾任研发总监（<strong>20+</strong>团队）、运维总监（<strong>70+</strong>驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近<strong>2000万</strong>。</p>
+                    <p lang="en" class="active-en">2017-2023, <strong>5 years</strong> of management experience. Served as R&D Director (<strong>20+</strong> team) and Operations Director (<strong>70+</strong> on-site ops team). Specialized in building teams from scratch, growing annual operations contract value from 1M to nearly <strong>20M CNY</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 lang="zh" class="active-zh">开源项目</h2>
+            <h2 lang="en" class="active-en">Open Source Projects</h2>
+            
+            <div class="section-subtitle" lang="zh">主导项目</div>
+            <div class="section-subtitle" lang="en">Lead Projects</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>DynamicWallpaper</h3>
+                    <span class="project-badge" lang="zh">主导开发</span>
+                    <span class="project-badge" lang="en">Lead Developer</span>
+                    <p lang="zh" class="active-zh">动态壁纸项目，提供精美的壁纸资源和动态壁纸体验。基于现代技术栈开发，用户体验流畅。</p>
+                    <p lang="en" class="active-en">Dynamic wallpaper project providing beautiful wallpaper resources and dynamic wallpaper experience. Built with modern technology stack for smooth user experience.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/gmij/DynamicWallpaper" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="zh">壁纸墙</a>
+                        <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="en">Gallery</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Audio3A_CSharp</h3>
+                    <span class="project-badge" lang="zh">AI驱动</span>
+                    <span class="project-badge" lang="en">AI-Powered</span>
+                    <p lang="zh" class="active-zh">完全由AI编写的.NET原生音频3A处理SDK。支持降噪、回声消除、自动增益等音频处理功能。</p>
+                    <p lang="en" class="active-en">AI-written .NET native audio 3A processing SDK. Supports noise reduction, echo cancellation, auto gain control and more.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/gmij/Audio3A_CSharp" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 lang="zh" class="active-zh">绿色软件下载站</h3>
+                    <h3 lang="en" class="active-en">Green Software Download Site</h3>
+                    <span class="project-badge" lang="zh">AI驱动</span>
+                    <span class="project-badge" lang="en">AI-Powered</span>
+                    <p lang="zh" class="active-zh">完全由AI编写的资源下载站，提供绿色、安全的软件下载服务。注重用户体验与资源质量。</p>
+                    <p lang="en" class="active-en">AI-written resource download site providing green, secure software downloads. Focus on user experience and resource quality.</p>
+                    <div class="project-links">
+                        <a href="https://gmij.win/soft/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="zh">访问站点</a>
+                        <a href="https://gmij.win/soft/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="en">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-subtitle" lang="zh">贡献项目</div>
+            <div class="section-subtitle" lang="en">Contributor Projects</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>SmartSql</h3>
+                    <span class="project-badge" lang="zh">活跃贡献者</span>
+                    <span class="project-badge" lang="en">Active Contributor</span>
+                    <p lang="zh" class="active-zh">高性能.NET ORM框架，属于DotNetCore社区项目。提供灵活的SQL映射与强大的性能优化能力。</p>
+                    <p lang="en" class="active-en">High-performance .NET ORM framework, part of DotNetCore community projects. Provides flexible SQL mapping and powerful performance optimization.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/dotnetcore/SmartSql" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Ant Design Blazor</h3>
+                    <span class="project-badge" lang="zh">活跃贡献者</span>
+                    <span class="project-badge" lang="en">Active Contributor</span>
+                    <p lang="zh" class="active-zh">企业级Blazor UI组件库，基于Ant Design设计体系。为.NET开发者提供优质的前端组件解决方案。</p>
+                    <p lang="en" class="active-en">Enterprise-grade Blazor UI component library based on Ant Design system. Provides quality frontend component solutions for .NET developers.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/ant-design-blazor/ant-design-blazor" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 lang="zh" class="active-zh">技能专长</h2>
+            <h2 lang="en" class="active-en">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 lang="zh" class="active-zh">技术栈</h3>
+                    <h3 lang="en" class="active-en">Tech Stack</h3>
+                    <ul class="skill-list">
+                        <li lang="zh" class="active-zh">.NET / C# 开发</li>
+                        <li lang="en" class="active-en">.NET / C# Development</li>
+                        <li lang="zh" class="active-zh">全栈开发（前后端）</li>
+                        <li lang="en" class="active-en">Full Stack Development</li>
+                        <li lang="zh" class="active-zh">数据库设计与优化</li>
+                        <li lang="en" class="active-en">Database Design & Optimization</li>
+                        <li lang="zh" class="active-zh">微服务架构</li>
+                        <li lang="en" class="active-en">Microservices Architecture</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>DevOps</h3>
+                    <ul class="skill-list">
+                        <li lang="zh" class="active-zh">持续集成/持续部署</li>
+                        <li lang="en" class="active-en">CI/CD</li>
+                        <li lang="zh" class="active-zh">TeamCity 构建管理</li>
+                        <li lang="en" class="active-en">TeamCity Build Management</li>
+                        <li lang="zh" class="active-zh">自动化测试</li>
+                        <li lang="en" class="active-en">Automated Testing</li>
+                        <li lang="zh" class="active-zh">容器化部署</li>
+                        <li lang="en" class="active-en">Containerized Deployment</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 lang="zh" class="active-zh">团队管理</h3>
+                    <h3 lang="en" class="active-en">Team Management</h3>
+                    <ul class="skill-list">
+                        <li lang="zh" class="active-zh">团队从0到1组建</li>
+                        <li lang="en" class="active-en">Building Teams from Scratch</li>
+                        <li lang="zh" class="active-zh">研发效能改进</li>
+                        <li lang="en" class="active-en">R&D Efficiency Improvement</li>
+                        <li lang="zh" class="active-zh">敏捷开发实践</li>
+                        <li lang="en" class="active-en">Agile Development Practices</li>
+                        <li lang="zh" class="active-zh">技术决策与架构设计</li>
+                        <li lang="en" class="active-en">Tech Decision & Architecture Design</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 lang="zh" class="active-zh">核心理念</h3>
+                    <h3 lang="en" class="active-en">Core Values</h3>
+                    <ul class="skill-list">
+                        <li lang="zh" class="active-zh">代码质量与重构</li>
+                        <li lang="en" class="active-en">Code Quality & Refactoring</li>
+                        <li lang="zh" class="active-zh">持续学习与创新</li>
+                        <li lang="en" class="active-en">Continuous Learning & Innovation</li>
+                        <li lang="zh" class="active-zh">开源社区贡献</li>
+                        <li lang="en" class="active-en">Open Source Contribution</li>
+                        <li lang="zh" class="active-zh">带领团队取得胜利</li>
+                        <li lang="en" class="active-en">Leading Teams to Victory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 GMIJ. All rights reserved.</p>
+            <p>
+                <a href="https://github.com/gmij" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span lang="zh" class="active-zh"> · <a href="https://dw.gmij.win" target="_blank" rel="noopener noreferrer">壁纸墙</a> · <a href="https://gmij.win/soft/" target="_blank" rel="noopener noreferrer">软件下载站</a></span>
+                <span lang="en" class="active-en"> · <a href="https://dw.gmij.win" target="_blank" rel="noopener noreferrer">Gallery</a> · <a href="https://gmij.win/soft/" target="_blank" rel="noopener noreferrer">Software</a></span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switcher - detect browser language
+        function getBrowserLanguage() {
+            const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+            // Check if browser language starts with 'zh' (zh, zh-CN, zh-TW, etc.)
+            return browserLang.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+        }
+        
+        let currentLang = getBrowserLanguage();
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            updateLanguage();
+        }
+        
+        function updateLanguage() {
+            const zhElements = document.querySelectorAll('[lang="zh"]');
+            const enElements = document.querySelectorAll('[lang="en"]');
+            
+            if (currentLang === 'zh') {
+                zhElements.forEach(el => el.classList.add('active-zh'));
+                enElements.forEach(el => el.classList.remove('active-en'));
+                document.documentElement.lang = 'zh-CN';
+            } else {
+                zhElements.forEach(el => el.classList.remove('active-zh'));
+                enElements.forEach(el => el.classList.add('active-en'));
+                document.documentElement.lang = 'en';
+            }
+        }
+        
+        // Initialize on page load
+        updateLanguage();
+    </script>
+</body>
+</html>
