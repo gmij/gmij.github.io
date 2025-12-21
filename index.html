@@ -311,6 +311,14 @@
             text-align: center;
         }
         
+        footer p {
+            margin-bottom: 0;
+        }
+        
+        footer p + p {
+            margin-top: 10px;
+        }
+        
         footer a {
             color: var(--secondary-color);
             text-decoration: none;
@@ -319,6 +327,18 @@
         
         footer a:hover {
             color: white;
+        }
+        
+        /* Section subheadings */
+        .section-subheading {
+            text-align: center;
+            color: var(--light-text);
+            margin: 30px 0 20px;
+            font-size: 1.4rem;
+        }
+        
+        .section-subheading + .section-subheading {
+            margin-top: 50px;
         }
         
         /* Animations */
@@ -432,7 +452,7 @@
         <div class="container">
             <h2>开源项目</h2>
             
-            <h3 style="text-align: center; color: var(--light-text); margin: 30px 0 20px; font-size: 1.4rem;">主导项目</h3>
+            <h3 class="section-subheading">主导项目</h3>
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-header">
@@ -483,7 +503,7 @@
                 </article>
             </div>
             
-            <h3 style="text-align: center; color: var(--light-text); margin: 50px 0 20px; font-size: 1.4rem;">贡献项目</h3>
+            <h3 class="section-subheading">贡献项目</h3>
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-header">
@@ -570,7 +590,7 @@
     <footer>
         <div class="container">
             <p>© 2024 GMIJ. All rights reserved.</p>
-            <p style="margin-top: 10px;">
+            <p>
                 <a href="https://github.com/gmij" target="_blank" rel="noopener noreferrer">GitHub</a> · 
                 <a href="https://dw.gmij.win" target="_blank" rel="noopener noreferrer">壁纸墙</a> · 
                 <a href="https://gmij.win/soft/" target="_blank" rel="noopener noreferrer">软件下载站</a>
