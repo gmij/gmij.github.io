@@ -82,6 +82,37 @@
             padding: 0 24px;
         }
         
+        /* Language Switcher */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .lang-btn {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        
+        .lang-btn:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--accent);
+        }
+        
+        /* Hide/Show based on language */
+        [lang="zh"]:not(.active-zh),
+        [lang="en"]:not(.active-en) {
+            display: none;
+        }
+        
         /* Header */
         header {
             padding: 80px 0 60px;
@@ -323,30 +354,46 @@
     </style>
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn" onclick="toggleLanguage()">
+            <span lang="zh" class="active-zh">EN</span>
+            <span lang="en" class="active-en">中文</span>
+        </button>
+    </div>
+
     <header>
         <div class="container">
             <h1>GMIJ</h1>
-            <p>全栈工程师 · 开源贡献者 · 技术管理专家</p>
+            <p lang="zh" class="active-zh">全栈工程师 · 开源贡献者 · 技术管理专家</p>
+            <p lang="en" class="active-en">Full Stack Engineer · Open Source Contributor · Tech Lead</p>
         </div>
     </header>
 
     <section>
         <div class="container">
-            <h2>关于我</h2>
+            <h2 lang="zh" class="active-zh">关于我</h2>
+            <h2 lang="en" class="active-en">About Me</h2>
             <div class="about-grid">
                 <div class="about-item">
-                    <h3>研发经验</h3>
-                    <p>2002年-2017年，15年专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。</p>
+                    <h3 lang="zh" class="active-zh">研发经验</h3>
+                    <h3 lang="en" class="active-en">Development Experience</h3>
+                    <p lang="zh" class="active-zh">2002年-2017年，15年专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。</p>
+                    <p lang="en" class="active-en">2002-2017, 15 years focused on .NET development as a full stack engineer. Committed to code quality with regular refactoring practices and maintaining high standards.</p>
                 </div>
                 
                 <div class="about-item">
-                    <h3>DevOps专家</h3>
-                    <p>熟练掌握DevOps相关知识，擅长使用TeamCity进行持续构建与持续集成，推动团队自动化与效率提升。</p>
+                    <h3 lang="zh" class="active-zh">DevOps专家</h3>
+                    <h3 lang="en" class="active-en">DevOps Expert</h3>
+                    <p lang="zh" class="active-zh">熟练掌握DevOps相关知识，擅长使用TeamCity进行持续构建与持续集成，推动团队自动化与效率提升。</p>
+                    <p lang="en" class="active-en">Proficient in DevOps practices, specializing in continuous integration with TeamCity, driving team automation and efficiency improvements.</p>
                 </div>
                 
                 <div class="about-item">
-                    <h3>管理经验</h3>
-                    <p>2017-2023年，5年管理经验。曾任研发总监（20+团队）、运维总监（70+驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近2000万。</p>
+                    <h3 lang="zh" class="active-zh">管理经验</h3>
+                    <h3 lang="en" class="active-en">Management Experience</h3>
+                    <p lang="zh" class="active-zh">2017-2023年，5年管理经验。曾任研发总监（20+团队）、运维总监（70+驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近2000万。</p>
+                    <p lang="en" class="active-en">2017-2023, 5 years of management experience. Served as R&D Director (20+ team) and Operations Director (70+ on-site ops team). Specialized in building teams from scratch, growing annual operations contract value from 1M to nearly 20M CNY.</p>
                 </div>
             </div>
         </div>
@@ -354,45 +401,59 @@
 
     <section>
         <div class="container">
-            <h2>开源项目</h2>
+            <h2 lang="zh" class="active-zh">开源项目</h2>
+            <h2 lang="en" class="active-en">Open Source Projects</h2>
             
-            <div class="section-subtitle">主导项目</div>
+            <div class="section-subtitle" lang="zh">主导项目</div>
+            <div class="section-subtitle" lang="en">Lead Projects</div>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>DynamicWallpaper</h3>
-                    <span class="project-badge">主导开发</span>
-                    <p>动态壁纸项目，提供精美的壁纸资源和动态壁纸体验。基于现代技术栈开发，用户体验流畅。</p>
+                    <span class="project-badge" lang="zh">主导开发</span>
+                    <span class="project-badge" lang="en">Lead Developer</span>
+                    <p lang="zh" class="active-zh">动态壁纸项目，提供精美的壁纸资源和动态壁纸体验。基于现代技术栈开发，用户体验流畅。</p>
+                    <p lang="en" class="active-en">Dynamic wallpaper project providing beautiful wallpaper resources and dynamic wallpaper experience. Built with modern technology stack for smooth user experience.</p>
                     <div class="project-links">
                         <a href="https://github.com/gmij/DynamicWallpaper" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer">壁纸墙</a>
+                        <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="zh">壁纸墙</a>
+                        <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="en">Gallery</a>
                     </div>
                 </div>
                 
                 <div class="project-card">
                     <h3>Audio3A_CSharp</h3>
-                    <span class="project-badge">AI驱动</span>
-                    <p>完全由AI编写的.NET原生音频3A处理SDK。支持降噪、回声消除、自动增益等音频处理功能。</p>
+                    <span class="project-badge" lang="zh">AI驱动</span>
+                    <span class="project-badge" lang="en">AI-Powered</span>
+                    <p lang="zh" class="active-zh">完全由AI编写的.NET原生音频3A处理SDK。支持降噪、回声消除、自动增益等音频处理功能。</p>
+                    <p lang="en" class="active-en">AI-written .NET native audio 3A processing SDK. Supports noise reduction, echo cancellation, auto gain control and more.</p>
                     <div class="project-links">
                         <a href="https://github.com/gmij/Audio3A_CSharp" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <h3>绿色软件下载站</h3>
-                    <span class="project-badge">AI驱动</span>
-                    <p>完全由AI编写的资源下载站，提供绿色、安全的软件下载服务。注重用户体验与资源质量。</p>
+                    <h3 lang="zh" class="active-zh">绿色软件下载站</h3>
+                    <h3 lang="en" class="active-en">Green Software Download Site</h3>
+                    <span class="project-badge" lang="zh">AI驱动</span>
+                    <span class="project-badge" lang="en">AI-Powered</span>
+                    <p lang="zh" class="active-zh">完全由AI编写的资源下载站，提供绿色、安全的软件下载服务。注重用户体验与资源质量。</p>
+                    <p lang="en" class="active-en">AI-written resource download site providing green, secure software downloads. Focus on user experience and resource quality.</p>
                     <div class="project-links">
-                        <a href="https://gmij.win/soft/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">访问站点</a>
+                        <a href="https://gmij.win/soft/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="zh">访问站点</a>
+                        <a href="https://gmij.win/soft/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="en">Visit Site</a>
                     </div>
                 </div>
             </div>
             
-            <div class="section-subtitle">贡献项目</div>
+            <div class="section-subtitle" lang="zh">贡献项目</div>
+            <div class="section-subtitle" lang="en">Contributor Projects</div>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>SmartSql</h3>
-                    <span class="project-badge">活跃贡献者</span>
-                    <p>高性能.NET ORM框架，属于DotNetCore社区项目。提供灵活的SQL映射与强大的性能优化能力。</p>
+                    <span class="project-badge" lang="zh">活跃贡献者</span>
+                    <span class="project-badge" lang="en">Active Contributor</span>
+                    <p lang="zh" class="active-zh">高性能.NET ORM框架，属于DotNetCore社区项目。提供灵活的SQL映射与强大的性能优化能力。</p>
+                    <p lang="en" class="active-en">High-performance .NET ORM framework, part of DotNetCore community projects. Provides flexible SQL mapping and powerful performance optimization.</p>
                     <div class="project-links">
                         <a href="https://github.com/dotnetcore/SmartSql" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
@@ -400,8 +461,10 @@
                 
                 <div class="project-card">
                     <h3>Ant Design Blazor</h3>
-                    <span class="project-badge">活跃贡献者</span>
-                    <p>企业级Blazor UI组件库，基于Ant Design设计体系。为.NET开发者提供优质的前端组件解决方案。</p>
+                    <span class="project-badge" lang="zh">活跃贡献者</span>
+                    <span class="project-badge" lang="en">Active Contributor</span>
+                    <p lang="zh" class="active-zh">企业级Blazor UI组件库，基于Ant Design设计体系。为.NET开发者提供优质的前端组件解决方案。</p>
+                    <p lang="en" class="active-en">Enterprise-grade Blazor UI component library based on Ant Design system. Provides quality frontend component solutions for .NET developers.</p>
                     <div class="project-links">
                         <a href="https://github.com/ant-design-blazor/ant-design-blazor" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
@@ -412,45 +475,65 @@
 
     <section>
         <div class="container">
-            <h2>技能专长</h2>
+            <h2 lang="zh" class="active-zh">技能专长</h2>
+            <h2 lang="en" class="active-en">Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>技术栈</h3>
+                    <h3 lang="zh" class="active-zh">技术栈</h3>
+                    <h3 lang="en" class="active-en">Tech Stack</h3>
                     <ul class="skill-list">
-                        <li>.NET / C# 开发</li>
-                        <li>全栈开发（前后端）</li>
-                        <li>数据库设计与优化</li>
-                        <li>微服务架构</li>
+                        <li lang="zh" class="active-zh">.NET / C# 开发</li>
+                        <li lang="en" class="active-en">.NET / C# Development</li>
+                        <li lang="zh" class="active-zh">全栈开发（前后端）</li>
+                        <li lang="en" class="active-en">Full Stack Development</li>
+                        <li lang="zh" class="active-zh">数据库设计与优化</li>
+                        <li lang="en" class="active-en">Database Design & Optimization</li>
+                        <li lang="zh" class="active-zh">微服务架构</li>
+                        <li lang="en" class="active-en">Microservices Architecture</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
                     <h3>DevOps</h3>
                     <ul class="skill-list">
-                        <li>持续集成/持续部署</li>
-                        <li>TeamCity 构建管理</li>
-                        <li>自动化测试</li>
-                        <li>容器化部署</li>
+                        <li lang="zh" class="active-zh">持续集成/持续部署</li>
+                        <li lang="en" class="active-en">CI/CD</li>
+                        <li lang="zh" class="active-zh">TeamCity 构建管理</li>
+                        <li lang="en" class="active-en">TeamCity Build Management</li>
+                        <li lang="zh" class="active-zh">自动化测试</li>
+                        <li lang="en" class="active-en">Automated Testing</li>
+                        <li lang="zh" class="active-zh">容器化部署</li>
+                        <li lang="en" class="active-en">Containerized Deployment</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>团队管理</h3>
+                    <h3 lang="zh" class="active-zh">团队管理</h3>
+                    <h3 lang="en" class="active-en">Team Management</h3>
                     <ul class="skill-list">
-                        <li>团队从0到1组建</li>
-                        <li>研发效能改进</li>
-                        <li>敏捷开发实践</li>
-                        <li>技术决策与架构设计</li>
+                        <li lang="zh" class="active-zh">团队从0到1组建</li>
+                        <li lang="en" class="active-en">Building Teams from Scratch</li>
+                        <li lang="zh" class="active-zh">研发效能改进</li>
+                        <li lang="en" class="active-en">R&D Efficiency Improvement</li>
+                        <li lang="zh" class="active-zh">敏捷开发实践</li>
+                        <li lang="en" class="active-en">Agile Development Practices</li>
+                        <li lang="zh" class="active-zh">技术决策与架构设计</li>
+                        <li lang="en" class="active-en">Tech Decision & Architecture Design</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>核心理念</h3>
+                    <h3 lang="zh" class="active-zh">核心理念</h3>
+                    <h3 lang="en" class="active-en">Core Values</h3>
                     <ul class="skill-list">
-                        <li>代码质量与重构</li>
-                        <li>持续学习与创新</li>
-                        <li>开源社区贡献</li>
-                        <li>带领团队取得胜利</li>
+                        <li lang="zh" class="active-zh">代码质量与重构</li>
+                        <li lang="en" class="active-en">Code Quality & Refactoring</li>
+                        <li lang="zh" class="active-zh">持续学习与创新</li>
+                        <li lang="en" class="active-en">Continuous Learning & Innovation</li>
+                        <li lang="zh" class="active-zh">开源社区贡献</li>
+                        <li lang="en" class="active-en">Open Source Contribution</li>
+                        <li lang="zh" class="active-zh">带领团队取得胜利</li>
+                        <li lang="en" class="active-en">Leading Teams to Victory</li>
                     </ul>
                 </div>
             </div>
@@ -462,10 +545,40 @@
             <p>© 2024 GMIJ. All rights reserved.</p>
             <p>
                 <a href="https://github.com/gmij" target="_blank" rel="noopener noreferrer">GitHub</a> · 
-                <a href="https://dw.gmij.win" target="_blank" rel="noopener noreferrer">壁纸墙</a> · 
-                <a href="https://gmij.win/soft/" target="_blank" rel="noopener noreferrer">软件下载站</a>
+                <a href="https://dw.gmij.win" target="_blank" rel="noopener noreferrer" lang="zh">壁纸墙</a>
+                <a href="https://dw.gmij.win" target="_blank" rel="noopener noreferrer" lang="en">Gallery</a> · 
+                <a href="https://gmij.win/soft/" target="_blank" rel="noopener noreferrer" lang="zh">软件下载站</a>
+                <a href="https://gmij.win/soft/" target="_blank" rel="noopener noreferrer" lang="en">Software</a>
             </p>
         </div>
     </footer>
+
+    <script>
+        // Language switcher
+        let currentLang = 'zh';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            updateLanguage();
+        }
+        
+        function updateLanguage() {
+            const zhElements = document.querySelectorAll('[lang="zh"]');
+            const enElements = document.querySelectorAll('[lang="en"]');
+            
+            if (currentLang === 'zh') {
+                zhElements.forEach(el => el.classList.add('active-zh'));
+                enElements.forEach(el => el.classList.remove('active-en'));
+                document.documentElement.lang = 'zh-CN';
+            } else {
+                zhElements.forEach(el => el.classList.remove('active-zh'));
+                enElements.forEach(el => el.classList.add('active-en'));
+                document.documentElement.lang = 'en';
+            }
+        }
+        
+        // Initialize on page load
+        updateLanguage();
+    </script>
 </body>
 </html>
