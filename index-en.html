@@ -351,7 +351,7 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 32px;
         }
         
@@ -441,7 +441,8 @@
             }
             
             .about-grid,
-            .projects-grid {
+            .projects-grid,
+            .skills-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -513,8 +514,7 @@
 
     <section>
         <div class="container">
-            <h2 lang="zh" class="active-zh">关于我</h2>
-            <h2 lang="en" class="active-en">About Me</h2>
+            <h2>About Me</h2>
             <div class="about-grid">
                 <div class="about-item">
                     <h3 lang="zh" class="active-zh"><span class="about-icon">💻</span>研发经验</h3>
@@ -549,8 +549,7 @@
 
     <section>
         <div class="container">
-            <h2 lang="zh" class="active-zh">开源项目</h2>
-            <h2 lang="en" class="active-en">Open Source Projects</h2>
+            <h2>Open Source Projects</h2>
             
             <div class="section-subtitle" lang="zh">主导项目</div>
             <div class="section-subtitle" lang="en">Lead Projects</div>
@@ -623,8 +622,7 @@
 
     <section>
         <div class="container">
-            <h2 lang="zh" class="active-zh">技能专长</h2>
-            <h2 lang="en" class="active-en">Skills & Expertise</h2>
+            <h2>Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3 lang="zh" class="active-zh">技术栈</h3>
