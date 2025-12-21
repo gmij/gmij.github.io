@@ -55,176 +55,154 @@
         }
         
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #333;
-            --light-text: #666;
-            --bg-color: #ffffff;
-            --section-bg: #f8f9fa;
-            --border-color: #e0e0e0;
-            --hover-color: #2980b9;
-            --shadow: 0 2px 15px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
-        }
-        
-        html {
-            scroll-behavior: smooth;
+            --bg-primary: #ffffff;
+            --bg-secondary: #fafafa;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --accent: #0066cc;
+            --accent-hover: #0052a3;
+            --border: #e5e5e5;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
         
         /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 80px 20px;
+            padding: 80px 0 60px;
             text-align: center;
-            box-shadow: var(--shadow);
+            border-bottom: 1px solid var(--border);
         }
         
         header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            animation: fadeInDown 1s ease;
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
         
         header p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease;
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 400;
         }
         
-        /* Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Sections */
+        /* Section */
         section {
-            padding: 60px 0;
-            animation: fadeIn 1s ease;
+            padding: 64px 0;
         }
         
-        section:nth-child(even) {
-            background-color: var(--section-bg);
+        section:not(:last-child) {
+            border-bottom: 1px solid var(--border);
         }
         
-        section h2 {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-            border-radius: 2px;
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: var(--text-primary);
         }
         
         /* About Section */
-        .about-content {
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
         
-        .about-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+        .about-item {
+            padding: 24px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
         }
         
-        .about-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        .about-item:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
         }
         
-        .about-card h3 {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .about-item h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
         }
         
-        .about-card p {
-            color: var(--light-text);
-            line-height: 1.8;
+        .about-item p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
         
         /* Projects Section */
+        .section-subtitle {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 40px 0 24px;
+            color: var(--text-primary);
+        }
+        
+        .section-subtitle:first-of-type {
+            margin-top: 0;
+        }
+        
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
         }
         
         .project-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
+            padding: 24px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s ease;
         }
         
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            border-color: var(--secondary-color);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
         }
         
-        .project-header {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            color: white;
-            padding: 25px;
-        }
-        
-        .project-header h3 {
-            font-size: 1.5rem;
+        .project-card h3 {
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 8px;
+            color: var(--text-primary);
         }
         
         .project-badge {
             display: inline-block;
-            background: rgba(255,255,255,0.25);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            margin-top: 8px;
+            padding: 4px 10px;
+            font-size: 12px;
+            background: #f0f0f0;
+            color: var(--text-secondary);
+            border-radius: 4px;
+            margin-bottom: 12px;
         }
         
-        .project-body {
-            padding: 25px;
-        }
-        
-        .project-body p {
-            color: var(--light-text);
-            margin-bottom: 20px;
-            min-height: 60px;
+        .project-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
         }
         
         .project-links {
@@ -234,54 +212,44 @@
         }
         
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            background: var(--secondary-color);
-            color: white;
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 14px;
+            color: var(--accent);
             text-decoration: none;
+            border: 1px solid var(--accent);
             border-radius: 6px;
-            transition: var(--transition);
+            transition: all 0.2s ease;
             font-weight: 500;
-            font-size: 0.95rem;
         }
         
         .btn:hover {
-            background: var(--hover-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+            background: var(--accent);
+            color: white;
         }
         
-        .btn-secondary {
-            background: var(--primary-color);
+        .btn-primary {
+            background: var(--accent);
+            color: white;
         }
         
-        .btn-secondary:hover {
-            background: #1a252f;
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
         }
         
         /* Skills Section */
-        .skills-container {
+        .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        
-        .skill-category {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
         }
         
         .skill-category h3 {
-            color: var(--secondary-color);
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--section-bg);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
         }
         
         .skill-list {
@@ -289,122 +257,71 @@
         }
         
         .skill-list li {
-            padding: 8px 0;
-            color: var(--light-text);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
         }
         
         .skill-list li::before {
-            content: '✓';
-            color: var(--secondary-color);
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
             font-weight: bold;
-            font-size: 1.2rem;
         }
         
         /* Footer */
         footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 40px 20px;
+            padding: 48px 0;
             text-align: center;
+            border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
         }
         
         footer p {
-            margin-bottom: 0;
-        }
-        
-        footer p + p {
-            margin-top: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
         }
         
         footer a {
-            color: var(--secondary-color);
+            color: var(--accent);
             text-decoration: none;
-            transition: var(--transition);
+            transition: color 0.2s ease;
         }
         
         footer a:hover {
-            color: white;
+            color: var(--accent-hover);
         }
         
-        /* Section subheadings */
-        .section-subheading {
-            text-align: center;
-            color: var(--light-text);
-            margin: 30px 0 20px;
-            font-size: 1.4rem;
-        }
-        
-        .section-subheading + .section-subheading {
-            margin-top: 50px;
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.2rem;
+                font-size: 36px;
             }
             
             header p {
-                font-size: 1.1rem;
+                font-size: 16px;
             }
             
-            section h2 {
-                font-size: 1.8rem;
+            h2 {
+                font-size: 24px;
             }
             
-            .about-content,
-            .projects-grid,
-            .skills-container {
+            .about-grid,
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
-        }
-        
-        /* Icon styles */
-        .icon {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
+            
+            section {
+                padding: 48px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <h1>GMIJ</h1>
@@ -412,137 +329,90 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
+    <section>
         <div class="container">
             <h2>关于我</h2>
-            <div class="about-content">
-                <article class="about-card">
-                    <h3>
-                        <span>💼</span> 研发经验
-                    </h3>
-                    <p>
-                        2002年-2017年，15年专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。
-                    </p>
-                </article>
+            <div class="about-grid">
+                <div class="about-item">
+                    <h3>研发经验</h3>
+                    <p>2002年-2017年，15年专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。</p>
+                </div>
                 
-                <article class="about-card">
-                    <h3>
-                        <span>🚀</span> DevOps专家
-                    </h3>
-                    <p>
-                        熟练掌握DevOps相关知识，擅长使用TeamCity进行持续构建与持续集成，推动团队自动化与效率提升。
-                    </p>
-                </article>
+                <div class="about-item">
+                    <h3>DevOps专家</h3>
+                    <p>熟练掌握DevOps相关知识，擅长使用TeamCity进行持续构建与持续集成，推动团队自动化与效率提升。</p>
+                </div>
                 
-                <article class="about-card">
-                    <h3>
-                        <span>👥</span> 管理经验
-                    </h3>
-                    <p>
-                        2017-2023年，5年管理经验。曾任研发总监（20+团队）、运维总监（70+驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近2000万。
-                    </p>
-                </article>
+                <div class="about-item">
+                    <h3>管理经验</h3>
+                    <p>2017-2023年，5年管理经验。曾任研发总监（20+团队）、运维总监（70+驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近2000万。</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <section>
         <div class="container">
             <h2>开源项目</h2>
             
-            <h3 class="section-subheading">主导项目</h3>
+            <div class="section-subtitle">主导项目</div>
             <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>DynamicWallpaper</h3>
-                        <span class="project-badge">主导开发</span>
+                <div class="project-card">
+                    <h3>DynamicWallpaper</h3>
+                    <span class="project-badge">主导开发</span>
+                    <p>动态壁纸项目，提供精美的壁纸资源和动态壁纸体验。基于现代技术栈开发，用户体验流畅。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/gmij/DynamicWallpaper" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer">壁纸墙</a>
                     </div>
-                    <div class="project-body">
-                        <p>动态壁纸项目，提供精美的壁纸资源和动态壁纸体验。基于现代技术栈开发，用户体验流畅。</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gmij/DynamicWallpaper" class="btn" target="_blank" rel="noopener noreferrer">
-                                <span>📦</span> GitHub
-                            </a>
-                            <a href="https://dw.gmij.win" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                                <span>🌐</span> 壁纸墙
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                </div>
                 
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>Audio3A_CSharp</h3>
-                        <span class="project-badge">AI驱动</span>
+                <div class="project-card">
+                    <h3>Audio3A_CSharp</h3>
+                    <span class="project-badge">AI驱动</span>
+                    <p>完全由AI编写的.NET原生音频3A处理SDK。支持降噪、回声消除、自动增益等音频处理功能。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/gmij/Audio3A_CSharp" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
-                    <div class="project-body">
-                        <p>完全由AI编写的.NET原生音频3A处理SDK。支持降噪、回声消除、自动增益等音频处理功能。</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gmij/Audio3A_CSharp" class="btn" target="_blank" rel="noopener noreferrer">
-                                <span>📦</span> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                </div>
                 
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>绿色软件下载站</h3>
-                        <span class="project-badge">AI驱动</span>
+                <div class="project-card">
+                    <h3>绿色软件下载站</h3>
+                    <span class="project-badge">AI驱动</span>
+                    <p>完全由AI编写的资源下载站，提供绿色、安全的软件下载服务。注重用户体验与资源质量。</p>
+                    <div class="project-links">
+                        <a href="https://gmij.win/soft/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">访问站点</a>
                     </div>
-                    <div class="project-body">
-                        <p>完全由AI编写的资源下载站，提供绿色、安全的软件下载服务。注重用户体验与资源质量。</p>
-                        <div class="project-links">
-                            <a href="https://gmij.win/soft/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                                <span>🌐</span> 访问站点
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                </div>
             </div>
             
-            <h3 class="section-subheading">贡献项目</h3>
+            <div class="section-subtitle">贡献项目</div>
             <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>SmartSql</h3>
-                        <span class="project-badge">活跃贡献者</span>
+                <div class="project-card">
+                    <h3>SmartSql</h3>
+                    <span class="project-badge">活跃贡献者</span>
+                    <p>高性能.NET ORM框架，属于DotNetCore社区项目。提供灵活的SQL映射与强大的性能优化能力。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/dotnetcore/SmartSql" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
-                    <div class="project-body">
-                        <p>高性能.NET ORM框架，属于DotNetCore社区项目。提供灵活的SQL映射与强大的性能优化能力。</p>
-                        <div class="project-links">
-                            <a href="https://github.com/dotnetcore/SmartSql" class="btn" target="_blank" rel="noopener noreferrer">
-                                <span>📦</span> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                </div>
                 
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>Ant Design Blazor</h3>
-                        <span class="project-badge">活跃贡献者</span>
+                <div class="project-card">
+                    <h3>Ant Design Blazor</h3>
+                    <span class="project-badge">活跃贡献者</span>
+                    <p>企业级Blazor UI组件库，基于Ant Design设计体系。为.NET开发者提供优质的前端组件解决方案。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/ant-design-blazor/ant-design-blazor" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
-                    <div class="project-body">
-                        <p>企业级Blazor UI组件库，基于Ant Design设计体系。为.NET开发者提供优质的前端组件解决方案。</p>
-                        <div class="project-links">
-                            <a href="https://github.com/ant-design-blazor/ant-design-blazor" class="btn" target="_blank" rel="noopener noreferrer">
-                                <span>📦</span> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <section>
         <div class="container">
             <h2>技能专长</h2>
-            <div class="skills-container">
+            <div class="skills-grid">
                 <div class="skill-category">
                     <h3>技术栈</h3>
                     <ul class="skill-list">
@@ -586,7 +456,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>© 2024 GMIJ. All rights reserved.</p>
