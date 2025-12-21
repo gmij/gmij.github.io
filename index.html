@@ -554,7 +554,7 @@
     <script>
         // Language switcher - detect browser language
         function getBrowserLanguage() {
-            const browserLang = navigator.language || navigator.userLanguage;
+            const browserLang = navigator.language || navigator.languages?.[0] || 'en';
             // Check if browser language starts with 'zh' (zh, zh-CN, zh-TW, etc.)
             return browserLang.toLowerCase().startsWith('zh') ? 'zh' : 'en';
         }
