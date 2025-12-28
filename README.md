@@ -19,6 +19,10 @@
 
 [绿色软件下载站](https://gmij.win/soft/)  =====>> 一个完全由AI编写的资源下载站
 
+[children_image](https://github.com/gmij/children_image) =====>> [img.gmij.win](https://img.gmij.win) 一个完全由AI编写的儿童手抄报生成器
+
+[zerotier-globalroute](https://github.com/gmij/zerotier-globalroute) =====>> 一个完全由AI编写的ZeroTier全局路由网关工具，用于个人VPN
+
 
 
 
