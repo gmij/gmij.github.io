@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Primary Meta Tags -->
-    <title>GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者</title>
-    <meta name="title" content="GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者">
-    <meta name="description" content="GMIJ，15年.NET全栈开发经验，5年技术管理经验。专注DevOps、持续集成、团队管理。活跃于SmartSql、Ant Design Blazor等开源项目，主导DynamicWallpaper、Audio3A_CSharp等项目。">
-    <meta name="keywords" content="GMIJ, 全栈工程师, .NET开发, DevOps, 开源项目, SmartSql, Ant Design Blazor, DynamicWallpaper, Audio3A_CSharp, 技术管理, 研发总监, AI编程, Spec-Kit, AI语音交互">
+    <title>GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor</title>
+    <meta name="title" content="GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor">
+    <meta name="description" content="GMIJ, 15 years .NET full stack development experience, 5 years technical management experience. Focused on DevOps, continuous integration, team management. Active in SmartSql, Ant Design Blazor and other open source projects.">
+    <meta name="keywords" content="GMIJ, Full Stack Engineer, .NET Development, DevOps, Open Source, SmartSql, Ant Design Blazor, DynamicWallpaper, Audio3A_CSharp, Technical Management, R&D Director, AI Programming, Spec-Kit, AI Voice Interaction">
     <meta name="author" content="GMIJ">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gmij.win/">
-    <meta property="og:title" content="GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者">
-    <meta property="og:description" content="GMIJ，15年.NET全栈开发经验，5年技术管理经验。专注DevOps、持续集成、团队管理。活跃于SmartSql、Ant Design Blazor等开源项目。">
+    <meta property="og:title" content="GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor">
+    <meta property="og:description" content="GMIJ, 15 years .NET full stack development experience, 5 years technical management experience. Focused on DevOps, continuous integration, team management. Active in SmartSql, Ant Design Blazor and other open source projects.">
     <meta property="og:site_name" content="GMIJ Personal Page">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gmij.win/">
-    <meta name="twitter:title" content="GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者">
-    <meta name="twitter:description" content="GMIJ，15年.NET全栈开发经验，5年技术管理经验。专注DevOps、持续集成、团队管理。">
+    <meta name="twitter:title" content="GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor">
+    <meta name="twitter:description" content="GMIJ, 15 years .NET full stack development experience, 5 years technical management experience. Focused on DevOps, continuous integration, team management.">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gmij.win/">
@@ -36,9 +36,9 @@
       "@type": "Person",
       "name": "GMIJ",
       "url": "https://gmij.win",
-      "jobTitle": "全栈工程师",
-      "description": "15年.NET全栈开发经验，5年技术管理经验",
-      "knowsAbout": [".NET开发", "DevOps", "持续集成", "团队管理", "全栈开发"],
+      "jobTitle": "Full Stack Engineer",
+      "description": "15 years .NET full stack development experience, 5 years technical management experience",
+      "knowsAbout": [".NET Development", "DevOps", "Continuous Integration", "Team Management", "Full Stack Development"],
       "sameAs": [
         "https://github.com/gmij",
         "https://github.com/dotnetcore/SmartSql",
@@ -109,8 +109,17 @@
             border-color: var(--accent);
         }
         
-        /* Hide English content by default */
-        [lang="en"] {
+        /* Hide Chinese content by default */
+        [lang="zh"] {
+            display: none;
+        }
+        
+        /* Show Chinese when language is set to zh */
+        html[lang="zh-CN"] [lang="zh"] {
+            display: block;
+        }
+        
+        html[lang="zh-CN"] [lang="en"] {
             display: none;
         }
         
@@ -485,9 +494,9 @@
 <body>
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <a href="index-en.html" class="lang-btn">
-            <span>EN</span>
-        </a>
+        <button id="lang-btn" class="lang-btn" onclick="toggleLanguage()">
+            <span id="lang-text">中文</span>
+        </button>
     </div>
 
     <header>
@@ -729,5 +738,58 @@
             </p>
         </div>
     </footer>
+    
+    <script>
+        // Language detection and switching
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const langText = document.getElementById('lang-text');
+            const currentLang = html.getAttribute('lang');
+            
+            if (currentLang === 'en') {
+                html.setAttribute('lang', 'zh-CN');
+                langText.textContent = 'EN';
+                localStorage.setItem('preferredLanguage', 'zh-CN');
+                updatePageTitle('zh-CN');
+            } else {
+                html.setAttribute('lang', 'en');
+                langText.textContent = '中文';
+                localStorage.setItem('preferredLanguage', 'en');
+                updatePageTitle('en');
+            }
+        }
+        
+        function updatePageTitle(lang) {
+            if (lang === 'zh-CN') {
+                document.title = 'GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者';
+            } else {
+                document.title = 'GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor';
+            }
+        }
+        
+        // Auto-detect browser language on page load
+        (function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            const browserLang = navigator.language || navigator.userLanguage;
+            const html = document.documentElement;
+            const langText = document.getElementById('lang-text');
+            
+            // Determine which language to use
+            let targetLang = 'en'; // Default to English
+            
+            if (savedLang) {
+                // Use saved preference
+                targetLang = savedLang;
+            } else if (browserLang && (browserLang.startsWith('zh') || browserLang.startsWith('zh-'))) {
+                // Browser language is Chinese
+                targetLang = 'zh-CN';
+            }
+            
+            // Apply the language
+            html.setAttribute('lang', targetLang);
+            langText.textContent = targetLang === 'zh-CN' ? 'EN' : '中文';
+            updatePageTitle(targetLang);
+        })();
+    </script>
 </body>
 </html>
