@@ -529,7 +529,8 @@
 
     <section>
         <div class="container">
-            <h2>关于我</h2>
+            <h2 lang="zh">关于我</h2>
+            <h2 lang="en">About Me</h2>
             <div class="about-grid">
                 <div class="about-item">
                     <h3><span class="about-icon">🤖</span>AI编程专家</h3>
@@ -556,7 +557,8 @@
 
     <section>
         <div class="container">
-            <h2>开源项目</h2>
+            <h2 lang="zh">开源项目</h2>
+            <h2 lang="en">Open Source Projects</h2>
             
             <div class="section-subtitle" lang="zh">主导项目</div>
             <div class="section-subtitle" lang="en">Lead Projects</div>
@@ -653,10 +655,12 @@
 
     <section>
         <div class="container">
-            <h2>技能专长</h2>
+            <h2 lang="zh">技能专长</h2>
+            <h2 lang="en">Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>技术栈</h3>
+                    <h3 lang="zh">技术栈</h3>
+                    <h3 lang="en">Tech Stack</h3>
                     <ul class="skill-list">
                         <li lang="zh" class="active-zh">.NET / C# 开发</li>
                         <li lang="en" class="active-en">.NET / C# Development</li>
@@ -670,7 +674,8 @@
                 </div>
                 
                 <div class="skill-category">
-                    <h3>DevOps</h3>
+                    <h3 lang="zh">DevOps</h3>
+                    <h3 lang="en">DevOps</h3>
                     <ul class="skill-list">
                         <li lang="zh" class="active-zh">持续集成/持续部署</li>
                         <li lang="en" class="active-en">CI/CD</li>
@@ -684,7 +689,8 @@
                 </div>
                 
                 <div class="skill-category">
-                    <h3>团队管理</h3>
+                    <h3 lang="zh">团队管理</h3>
+                    <h3 lang="en">Team Management</h3>
                     <ul class="skill-list">
                         <li lang="zh" class="active-zh">团队从0到1组建</li>
                         <li lang="en" class="active-en">Building Teams from Scratch</li>
@@ -698,7 +704,8 @@
                 </div>
                 
                 <div class="skill-category">
-                    <h3>AI编程</h3>
+                    <h3 lang="zh">AI编程</h3>
+                    <h3 lang="en">AI Programming</h3>
                     <ul class="skill-list">
                         <li lang="zh" class="active-zh">Spec-Kit 工具应用</li>
                         <li lang="en" class="active-en">Spec-Kit Tool Application</li>
@@ -712,7 +719,8 @@
                 </div>
                 
                 <div class="skill-category">
-                    <h3>核心理念</h3>
+                    <h3 lang="zh">核心理念</h3>
+                    <h3 lang="en">Core Values</h3>
                     <ul class="skill-list">
                         <li lang="zh" class="active-zh">代码质量与重构</li>
                         <li lang="en" class="active-en">Code Quality & Refactoring</li>
@@ -780,7 +788,7 @@
             if (savedLang) {
                 // Use saved preference
                 targetLang = savedLang;
-            } else if (browserLang && (browserLang.startsWith('zh') || browserLang.startsWith('zh-'))) {
+            } else if (browserLang && browserLang.startsWith('zh')) {
                 // Browser language is Chinese
                 targetLang = 'zh-CN';
             }
