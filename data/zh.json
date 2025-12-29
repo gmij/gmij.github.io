@@ -1,167 +1,19 @@
 {
-  "meta": {
-    "title": "GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者",
-    "description": "GMIJ，15年.NET全栈开发经验，5年技术管理经验。专注DevOps、持续集成、团队管理。活跃于SmartSql、Ant Design Blazor等开源项目。",
-    "keywords": "GMIJ, 全栈工程师, .NET开发, DevOps, 开源, SmartSql, Ant Design Blazor, DynamicWallpaper, Audio3A_CSharp, 技术管理, 研发总监, AI编程, Spec-Kit, AI语音交互"
-  },
-  "header": {
-    "stats": [
-      {
-        "number": "15+",
-        "label": "年研发经验"
-      },
-      {
-        "number": "5+",
-        "label": "年管理经验"
-      },
-      {
-        "number": "20X",
-        "label": "营收增长"
-      }
-    ],
-    "name": "GMIJ",
-    "tagline": "从代码到管理，从0到1的实战专家",
-    "subtitle": "全栈工程师 · 开源贡献者 · 技术管理专家"
-  },
-  "about": {
-    "items": [
-      {
-        "icon": "🤖",
-        "title": "AI编程专家",
-        "description": "熟悉**Spec-Kit**等AI编程工具，擅长利用AI辅助开发提升效率。在**AI语音交互**领域有深入研究，主导开发了.NET原生音频3A处理SDK，具备AI驱动的软件开发实战经验。"
-      },
-      {
-        "icon": "💻",
-        "title": "研发经验",
-        "description": "2002年-2017年，**15年**专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。"
-      },
-      {
-        "icon": "🚀",
-        "title": "DevOps专家",
-        "description": "熟练掌握DevOps相关知识，擅长使用**TeamCity**进行持续构建与持续集成，推动团队自动化与效率提升。"
-      },
-      {
-        "icon": "👥",
-        "title": "管理经验",
-        "description": "2017-2023年，**5年**管理经验。曾任研发总监（**20+**团队）、运维总监（**70+**驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近**2000万**。"
-      }
-    ],
-    "title": "关于我"
-  },
-  "projects": {
-    "leadProjects": [
-      {
-        "name": "DynamicWallpaper",
-        "badge": "主导开发",
-        "description": "动态壁纸项目，提供精美的壁纸资源和动态壁纸体验。基于现代技术栈开发，用户体验流畅。",
-        "github": "https://github.com/gmij/DynamicWallpaper",
-        "website": "https://dw.gmij.win",
-        "websiteLabel": "访问站点"
-      },
-      {
-        "name": "Audio3A_CSharp",
-        "badge": "AI驱动",
-        "description": "完全由AI编写的.NET原生音频3A处理SDK。支持降噪、回声消除、自动增益等音频处理功能。",
-        "github": "https://github.com/gmij/Audio3A_CSharp"
-      },
-      {
-        "name": "绿色软件下载站",
-        "badge": "AI驱动",
-        "description": "完全由AI编写的资源下载站，提供绿色、安全的软件下载服务。注重用户体验与资源质量。",
-        "github": "https://github.com/gmij/gmij.github.io/tree/main/soft",
-        "website": "https://gmij.win/soft/",
-        "websiteLabel": "访问站点"
-      },
-      {
-        "name": "Children Image",
-        "badge": "AI驱动",
-        "description": "完全由AI编写的儿童手抄报生成器，支持H5和微信小程序。一句话描述即可生成精美手抄报，专为幼儿园家长设计。",
-        "github": "https://github.com/gmij/children_image",
-        "website": "https://img.gmij.win",
-        "websiteLabel": "访问站点"
-      },
-      {
-        "name": "ZerotierFix",
-        "badge": "AI驱动",
-        "description": "完全由AI完善的ZeroTier安卓客户端，完善了全局路由功能。支持自建Moon服务器、自定义Planet配置、查看节点列表等功能，适合搭建个人VPN。",
-        "github": "https://github.com/gmij/ZerotierFix"
-      }
-    ],
-    "contributorProjects": [],
-    "title": "开源项目",
-    "leadTitle": "主导项目",
-    "contributorTitle": "贡献项目"
-  },
-  "skills": {
-    "categories": [
-      {
-        "name": "技术栈",
-        "items": [
-          ".NET / C# 开发",
-          "全栈开发（前后端）",
-          "数据库设计与优化",
-          "微服务架构"
-        ]
-      },
-      {
-        "name": "DevOps",
-        "items": [
-          "持续集成/持续部署",
-          "TeamCity 构建管理",
-          "自动化测试",
-          "容器化部署"
-        ]
-      },
-      {
-        "name": "团队管理",
-        "items": [
-          "团队从0到1组建",
-          "研发效能改进",
-          "敏捷开发实践",
-          "技术决策与架构设计"
-        ]
-      },
-      {
-        "name": "AI编程",
-        "items": [
-          "Spec-Kit 工具应用",
-          "AI辅助开发",
-          "AI语音交互技术",
-          "音频3A处理"
-        ]
-      },
-      {
-        "name": "核心理念",
-        "items": [
-          "代码质量与重构",
-          "持续学习与创新",
-          "开源社区贡献",
-          "带领团队取得胜利"
-        ]
-      }
-    ],
-    "title": "技能专长"
-  },
-  "footer": {
-    "links": [
-      {
-        "label": "GitHub",
-        "url": "https://github.com/gmij"
-      },
-      {
-        "label": "壁纸墙",
-        "url": "https://dw.gmij.win"
-      },
-      {
-        "label": "软件下载站",
-        "url": "https://gmij.win/soft/"
-      }
-    ],
-    "copyright": "© 2024 GMIJ. All rights reserved."
-  },
-  "ui": {
-    "langButton": "EN",
-    "githubLabel": "GitHub",
-    "loading": "加载中..."
-  }
+  "name": "GMIJ",
+  "tagline": "Experienced Developer and Manager",
+  "subtitle": "15 years in .NET development, 5 years in management, and a passion for open source and AI-driven projects.",
+  "stats": [
+    {
+      "number": "15+",
+      "label": "Years of Development Experience"
+    },
+    {
+      "number": "5+",
+      "label": "Years of Management Experience"
+    },
+    {
+      "number": "20M",
+      "label": "Annual Operations Revenue Growth (CNY)"
+    }
+  ]
 }
