@@ -481,7 +481,7 @@
     <!-- Language Switcher -->
     <div class="lang-switcher">
         <button id="lang-btn" class="lang-btn" onclick="toggleLanguage()">
-            <span id="lang-text">Loading...</span>
+            <span id="lang-text">...</span>
         </button>
     </div>
 
@@ -551,20 +551,27 @@
         </svg>`;
         
         // Load language data
+        let loadAttempts = 0;
         async function loadLanguageData(lang) {
             try {
-                const response = await fetch(`/data/${lang}.json`);
+                loadAttempts++;
+                const response = await fetch(`./data/${lang}.json`);
                 if (!response.ok) {
                     throw new Error(`Failed to load ${lang}.json`);
                 }
                 contentData = await response.json();
                 renderPage();
+                loadAttempts = 0; // Reset on success
             } catch (error) {
                 console.error('Error loading language data:', error);
-                // Fallback to English if current language fails
-                if (lang !== 'en') {
+                // Fallback to English if current language fails, but prevent infinite recursion
+                if (lang !== 'en' && loadAttempts < 2) {
                     currentLang = 'en';
                     loadLanguageData('en');
+                } else {
+                    // Final fallback - show error message
+                    document.getElementById('lang-text').textContent = 'Error';
+                    console.error('Failed to load any language data');
                 }
             }
         }
