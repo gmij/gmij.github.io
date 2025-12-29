@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Personal Website Content Schema",
+  "description": "Schema for personal website multilingual content",
+  "type": "object",
+  "required": ["meta", "header", "about", "projects", "skills", "footer", "ui"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "SEO metadata",
+      "required": ["title", "description", "keywords"],
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "keywords": { "type": "string" }
+      }
+    },
+    "header": {
+      "type": "object",
+      "description": "Page header content",
+      "required": ["name", "tagline", "subtitle", "stats"],
+      "properties": {
+        "name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "stats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["number", "label"],
+            "properties": {
+              "number": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "about": {
+      "type": "object",
+      "description": "About section",
+      "required": ["title", "items"],
+      "properties": {
+        "title": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["icon", "title", "description"],
+            "properties": {
+              "icon": { "type": "string" },
+              "title": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "object",
+      "description": "Projects section",
+      "required": ["title", "leadTitle", "contributorTitle", "leadProjects", "contributorProjects"],
+      "properties": {
+        "title": { "type": "string" },
+        "leadTitle": { "type": "string" },
+        "contributorTitle": { "type": "string" },
+        "leadProjects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "badge", "description"],
+            "properties": {
+              "name": { "type": "string" },
+              "badge": { "type": "string" },
+              "description": { "type": "string" },
+              "github": { "type": "string" },
+              "website": { "type": "string" },
+              "websiteLabel": { "type": "string" }
+            }
+          }
+        },
+        "contributorProjects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "badge", "description"],
+            "properties": {
+              "name": { "type": "string" },
+              "badge": { "type": "string" },
+              "description": { "type": "string" },
+              "github": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "object",
+      "description": "Skills section",
+      "required": ["title", "categories"],
+      "properties": {
+        "title": { "type": "string" },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "items"],
+            "properties": {
+              "name": { "type": "string" },
+              "items": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "description": "Footer content",
+      "required": ["copyright", "links"],
+      "properties": {
+        "copyright": { "type": "string" },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "url"],
+            "properties": {
+              "label": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "ui": {
+      "type": "object",
+      "description": "UI text labels",
+      "required": ["langButton", "githubLabel", "loading"],
+      "properties": {
+        "langButton": { "type": "string" },
+        "githubLabel": { "type": "string" },
+        "loading": { "type": "string" }
+      }
+    }
+  }
+}

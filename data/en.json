@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "title": "GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor",
+    "description": "GMIJ, 15 years .NET full stack development experience, 5 years technical management experience. Focused on DevOps, continuous integration, team management. Active in SmartSql, Ant Design Blazor and other open source projects.",
+    "keywords": "GMIJ, Full Stack Engineer, .NET Development, DevOps, Open Source, SmartSql, Ant Design Blazor, DynamicWallpaper, Audio3A_CSharp, Technical Management, R&D Director, AI Programming, Spec-Kit, AI Voice Interaction"
+  },
+  "header": {
+    "stats": [
+      {
+        "number": "15+",
+        "label": "Years Dev"
+      },
+      {
+        "number": "5+",
+        "label": "Years Lead"
+      },
+      {
+        "number": "20X",
+        "label": "Revenue Growth"
+      }
+    ],
+    "name": "GMIJ",
+    "tagline": "From Code to Leadership, 0-to-1 Expert",
+    "subtitle": "Full Stack Engineer · Open Source Contributor · Tech Lead"
+  },
+  "about": {
+    "items": [
+      {
+        "icon": "🤖",
+        "title": "AI Programming Expert",
+        "description": "Proficient in AI programming tools like **Spec-Kit**, leveraging AI-assisted development to boost efficiency. Deep expertise in **AI voice interaction**, led development of .NET native audio 3A processing SDK with hands-on experience in AI-driven software development."
+      },
+      {
+        "icon": "💻",
+        "title": "Development Experience",
+        "description": "2002-2017, **15 years** focused on .NET development as a full stack engineer. Committed to code quality with regular refactoring practices and maintaining high standards."
+      },
+      {
+        "icon": "🚀",
+        "title": "DevOps Expert",
+        "description": "Proficient in DevOps practices, specializing in continuous integration with **TeamCity**, driving team automation and efficiency improvements."
+      },
+      {
+        "icon": "👥",
+        "title": "Management Experience",
+        "description": "2017-2023, **5 years** of management experience. Served as R&D Director (**20+** team) and Operations Director (**70+** on-site ops team). Specialized in building teams from scratch, growing annual operations contract value from 1M to nearly **20M CNY**."
+      }
+    ],
+    "title": "About Me"
+  },
+  "projects": {
+    "leadProjects": [
+      {
+        "name": "DynamicWallpaper",
+        "badge": "Lead Developer",
+        "description": "Dynamic wallpaper project providing beautiful wallpaper resources and dynamic wallpaper experience. Built with modern technology stack for smooth user experience.",
+        "github": "https://github.com/gmij/DynamicWallpaper",
+        "website": "https://dw.gmij.win",
+        "websiteLabel": "Visit Site"
+      },
+      {
+        "name": "Audio3A_CSharp",
+        "badge": "AI-Powered",
+        "description": "AI-written .NET native audio 3A processing SDK. Supports noise reduction, echo cancellation, auto gain control and more.",
+        "github": "https://github.com/gmij/Audio3A_CSharp"
+      },
+      {
+        "name": "Green Software Download Site",
+        "badge": "AI-Powered",
+        "description": "AI-written resource download site providing green, secure software downloads. Focus on user experience and resource quality.",
+        "github": "https://github.com/gmij/gmij.github.io/tree/main/soft",
+        "website": "https://gmij.win/soft/",
+        "websiteLabel": "Visit Site"
+      },
+      {
+        "name": "Children Image",
+        "badge": "AI-Powered",
+        "description": "AI-written children's handwritten newspaper generator, supporting H5 and WeChat Mini Program. Generate beautiful handwritten newspapers with one sentence, designed for kindergarten parents.",
+        "github": "https://github.com/gmij/children_image",
+        "website": "https://img.gmij.win",
+        "websiteLabel": "Visit Site"
+      },
+      {
+        "name": "ZerotierFix",
+        "badge": "AI-Powered",
+        "description": "AI-enhanced unofficial ZeroTier Android client with improved global routing. Supports self-hosted Moon servers, custom Planet config, peer list viewing, and more for personal VPN setup.",
+        "github": "https://github.com/gmij/ZerotierFix"
+      }
+    ],
+    "contributorProjects": [],
+    "title": "Open Source Projects",
+    "leadTitle": "Lead Projects",
+    "contributorTitle": "Contributor Projects"
+  },
+  "skills": {
+    "categories": [
+      {
+        "name": "Tech Stack",
+        "items": [
+          ".NET / C# Development",
+          "Full Stack Development",
+          "Database Design & Optimization",
+          "Microservices Architecture"
+        ]
+      },
+      {
+        "name": "DevOps",
+        "items": [
+          "CI/CD",
+          "TeamCity Build Management",
+          "Automated Testing",
+          "Containerized Deployment"
+        ]
+      },
+      {
+        "name": "Team Management",
+        "items": [
+          "Building Teams from Scratch",
+          "R&D Efficiency Improvement",
+          "Agile Development Practices",
+          "Tech Decision & Architecture Design"
+        ]
+      },
+      {
+        "name": "AI Programming",
+        "items": [
+          "Spec-Kit Tool Application",
+          "AI-Assisted Development",
+          "AI Voice Interaction",
+          "Audio 3A Processing"
+        ]
+      },
+      {
+        "name": "Core Values",
+        "items": [
+          "Code Quality & Refactoring",
+          "Continuous Learning & Innovation",
+          "Open Source Contribution",
+          "Leading Teams to Victory"
+        ]
+      }
+    ],
+    "title": "Skills & Expertise"
+  },
+  "footer": {
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/gmij"
+      },
+      {
+        "label": "Gallery",
+        "url": "https://dw.gmij.win"
+      },
+      {
+        "label": "Software",
+        "url": "https://gmij.win/soft/"
+      }
+    ],
+    "copyright": "© 2024 GMIJ. All rights reserved."
+  },
+  "ui": {
+    "langButton": "中文",
+    "githubLabel": "GitHub",
+    "loading": "Loading..."
+  }
+}
