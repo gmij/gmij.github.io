@@ -1,5 +1,147 @@
 {
-  "title": "GMIJ - Personal Introduction",
-  "description": "GMIJ's personal introduction, showcasing 15 years of .NET development experience, 5 years of management experience, and contributions to open source projects.",
-  "keywords": "GMIJ, .NET, DevOps, TeamCity, R&D, management, open source, AI projects"
+  "meta": {
+    "title": "GMIJ - Personal Introduction",
+    "description": "GMIJ's personal introduction, showcasing 15 years of .NET development experience, 5 years of management experience, and contributions to open source projects.",
+    "keywords": "GMIJ, .NET, DevOps, TeamCity, R&D, management, open source, AI projects"
+  },
+  "header": {
+    "name": "GMIJ",
+    "tagline": "Senior Developer & Manager",
+    "subtitle": "15 years in .NET development, 5 years in management, passionate about open source and AI-driven innovation.",
+    "stats": [
+      {
+        "number": "15+",
+        "label": "Years of Development Experience"
+      },
+      {
+        "number": "5+",
+        "label": "Years of Management Experience"
+      },
+      {
+        "number": "20M CNY",
+        "label": "Annual Operations Revenue"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "items": [
+      {
+        "icon": "💻",
+        "title": "Full-Stack Development",
+        "description": "15 years of development experience (2002-2017), specializing in .NET development. A full-stack engineer with high standards for code quality and regular refactoring practices."
+      },
+      {
+        "icon": "🚀",
+        "title": "DevOps Expert",
+        "description": "Proficient in DevOps practices, skilled in using TeamCity for continuous integration and deployment, dedicated to improving R&D efficiency."
+      },
+      {
+        "icon": "👥",
+        "title": "Team Leadership",
+        "description": "5 years of management experience (2017-2023), served as R&D Director (20+ team members) and Operations Director (70+ on-site operations team), skilled in building teams from scratch."
+      },
+      {
+        "icon": "📈",
+        "title": "Performance Growth",
+        "description": "Expert in R&D efficiency improvement and operations management optimization, increased annual operations contract value from 1M to nearly 20M CNY. Management philosophy: Leading teams to continuous victories."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Open Source Projects",
+    "leadTitle": "Lead Projects",
+    "contributorTitle": "Contributor Projects",
+    "leadProjects": [
+      {
+        "name": "DynamicWallpaper",
+        "badge": "⭐ Featured",
+        "description": "A powerful dynamic wallpaper application with multiple wallpaper sources and customizable settings.",
+        "github": "https://github.com/gmij/DynamicWallpaper",
+        "website": "https://dw.gmij.win",
+        "websiteLabel": "Wallpaper Gallery"
+      },
+      {
+        "name": "Audio3A_CSharp",
+        "badge": "🤖 AI-Written",
+        "description": "A fully AI-written .NET native audio 3A processing SDK providing noise reduction, echo cancellation, and more.",
+        "github": "https://github.com/gmij/Audio3A_CSharp"
+      },
+      {
+        "name": "Green Software Hub",
+        "badge": "🤖 AI-Written",
+        "description": "A fully AI-written resource download site providing green software download services.",
+        "github": "https://github.com/gmij/soft",
+        "website": "https://gmij.win/soft",
+        "websiteLabel": "Visit Site"
+      },
+      {
+        "name": "Children Image",
+        "badge": "🤖 AI-Written",
+        "description": "AI Children's Art - A fully AI-written children's handout generator helping kids create beautiful handouts quickly.",
+        "github": "https://github.com/gmij/children_image",
+        "website": "https://img.gmij.win",
+        "websiteLabel": "Visit Site"
+      },
+      {
+        "name": "ZerotierFix",
+        "badge": "🤖 AI-Enhanced",
+        "description": "A fully AI-enhanced ZeroTier Android client for personal VPN services.",
+        "github": "https://github.com/gmij/ZerotierFix"
+      }
+    ],
+    "contributorProjects": [
+      {
+        "name": "SmartSql",
+        "badge": "⚡ ORM Framework",
+        "description": "High-performance, extensible .NET ORM framework supporting multiple databases and dynamic SQL.",
+        "github": "https://github.com/dotnetcore/SmartSql"
+      },
+      {
+        "name": "Ant Design Blazor",
+        "badge": "🎨 UI Library",
+        "description": "Enterprise-class UI components based on Ant Design for Blazor.",
+        "github": "https://github.com/ant-design-blazor/ant-design-blazor"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "categories": [
+      {
+        "name": "Development",
+        "items": [".NET/C#", "Full-Stack Development", "Code Refactoring", "Software Architecture"]
+      },
+      {
+        "name": "DevOps",
+        "items": ["TeamCity", "Continuous Integration", "Continuous Deployment", "R&D Efficiency"]
+      },
+      {
+        "name": "Management",
+        "items": ["Team Building", "R&D Management", "Operations Management", "Performance Growth"]
+      },
+      {
+        "name": "AI Applications",
+        "items": ["AI-Assisted Development", "AI-Driven Projects", "Tech Innovation"]
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025 GMIJ. All rights reserved.",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/gmij"
+      },
+      {
+        "label": "Privacy Statement",
+        "url": "/PrivacyStatement"
+      }
+    ]
+  },
+  "ui": {
+    "langButton": "中文",
+    "githubLabel": "GitHub",
+    "loading": "Loading..."
+  }
 }
