@@ -26,11 +26,11 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install openai
+          pip install requests
       
-      - name: Generate JSON files using AI
+      - name: Generate JSON files using GitHub AI
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/generate-json.py
       
@@ -52,5 +52,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/en.json data/zh.json
-          git commit -m "Auto-generate JSON files from README.md using AI [skip ci]"
+          git commit -m "Auto-generate JSON files from README.md using GitHub AI [skip ci]"
           git push

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate language-specific JSON files from README.md using AI
-This script uses OpenAI API to understand README.md and generate structured JSON files
+This script uses GitHub Models API to understand README.md and generate structured JSON files
 """
 
 import json
@@ -10,12 +10,12 @@ import sys
 from pathlib import Path
 
 def generate_json_with_ai():
-    """Use OpenAI API to generate JSON files from README.md"""
+    """Use GitHub Models API to generate JSON files from README.md"""
     
-    # Check for OpenAI API key
-    api_key = os.environ.get('OPENAI_API_KEY')
-    if not api_key:
-        print("Error: OPENAI_API_KEY environment variable not set")
+    # GitHub token is automatically available in Actions
+    github_token = os.environ.get('GITHUB_TOKEN')
+    if not github_token:
+        print("Error: GITHUB_TOKEN environment variable not set")
         return 1
     
     # Read README.md
@@ -73,26 +73,40 @@ Use proper English translations for the English version.
 """
 
     try:
-        import openai
+        import requests
         
-        # Set up OpenAI client
-        client = openai.OpenAI(api_key=api_key)
+        # Use GitHub Models API
+        api_url = "https://models.inference.ai.azure.com/chat/completions"
         
-        print("Calling OpenAI API to generate JSON files...")
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {github_token}"
+        }
         
-        # Call OpenAI API
-        response = client.chat.completions.create(
-            model="gpt-4-turbo-preview",
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant that converts personal information into structured JSON format. Always respond with valid JSON."},
-                {"role": "user", "content": prompt}
+        payload = {
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are a helpful assistant that converts personal information into structured JSON format. Always respond with valid JSON."
+                },
+                {
+                    "role": "user",
+                    "content": prompt
+                }
             ],
-            temperature=0.3,
-            max_tokens=4000
-        )
+            "model": "gpt-4o",
+            "temperature": 0.3,
+            "max_tokens": 4000
+        }
+        
+        print("Calling GitHub Models API to generate JSON files...")
+        
+        response = requests.post(api_url, headers=headers, json=payload)
+        response.raise_for_status()
         
         # Extract the response
-        content = response.choices[0].message.content
+        result = response.json()
+        content = result['choices'][0]['message']['content']
         
         # Parse the response to extract JSON objects
         en_json_str = None
@@ -169,10 +183,16 @@ Use proper English translations for the English version.
         
         return 0
         
-    except ImportError:
-        print("Error: openai package not installed. Installing...")
-        os.system("pip install openai")
+    except ImportError as e:
+        print(f"Error: Missing required package: {e}")
+        print("Installing requests...")
+        os.system("pip install requests")
         print("Please run the script again.")
+        return 1
+    except requests.exceptions.RequestException as e:
+        print(f"Error calling GitHub Models API: {e}")
+        if hasattr(e.response, 'text'):
+            print(f"Response: {e.response.text}")
         return 1
     except Exception as e:
         print(f"Error: {e}")
