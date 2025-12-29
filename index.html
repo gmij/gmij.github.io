@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Primary Meta Tags -->
-    <title>GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor</title>
-    <meta name="title" content="GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor">
-    <meta name="description" content="GMIJ, 15 years .NET full stack development experience, 5 years technical management experience. Focused on DevOps, continuous integration, team management. Active in SmartSql, Ant Design Blazor and other open source projects.">
-    <meta name="keywords" content="GMIJ, Full Stack Engineer, .NET Development, DevOps, Open Source, SmartSql, Ant Design Blazor, DynamicWallpaper, Audio3A_CSharp, Technical Management, R&D Director, AI Programming, Spec-Kit, AI Voice Interaction">
+    <!-- Primary Meta Tags - will be updated dynamically -->
+    <title>GMIJ</title>
+    <meta name="title" content="GMIJ">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <meta name="author" content="GMIJ">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gmij.win/">
-    <meta property="og:title" content="GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor">
-    <meta property="og:description" content="GMIJ, 15 years .NET full stack development experience, 5 years technical management experience. Focused on DevOps, continuous integration, team management. Active in SmartSql, Ant Design Blazor and other open source projects.">
+    <meta property="og:title" content="GMIJ">
+    <meta property="og:description" content="">
     <meta property="og:site_name" content="GMIJ Personal Page">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gmij.win/">
-    <meta name="twitter:title" content="GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor">
-    <meta name="twitter:description" content="GMIJ, 15 years .NET full stack development experience, 5 years technical management experience. Focused on DevOps, continuous integration, team management.">
+    <meta name="twitter:title" content="GMIJ">
+    <meta name="twitter:description" content="">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gmij.win/">
@@ -107,20 +107,6 @@
         .lang-btn:hover {
             background: var(--bg-tertiary);
             border-color: var(--accent);
-        }
-        
-        /* Hide Chinese content by default */
-        [lang="zh"] {
-            display: none;
-        }
-        
-        /* Show Chinese when language is set to zh */
-        html[lang="zh-CN"] [lang="zh"] {
-            display: block;
-        }
-        
-        html[lang="zh-CN"] [lang="en"] {
-            display: none;
         }
         
         /* Header */
@@ -495,357 +481,266 @@
     <!-- Language Switcher -->
     <div class="lang-switcher">
         <button id="lang-btn" class="lang-btn" onclick="toggleLanguage()">
-            <span id="lang-text">中文</span>
+            <span id="lang-text">Loading...</span>
         </button>
     </div>
 
     <header>
         <div class="container">
-            <h1>GMIJ</h1>
-            <p class="tagline" lang="zh">从代码到管理，从0到1的实战专家</p>
-            <p class="tagline" lang="en">From Code to Leadership, 0-to-1 Expert</p>
-            <p class="subtitle" lang="zh">全栈工程师 · 开源贡献者 · 技术管理专家</p>
-            <p class="subtitle" lang="en">Full Stack Engineer · Open Source Contributor · Tech Lead</p>
+            <h1 id="header-name">GMIJ</h1>
+            <p class="tagline" id="header-tagline"></p>
+            <p class="subtitle" id="header-subtitle"></p>
             
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label" lang="zh">年研发经验</span>
-                    <span class="stat-label" lang="en">Years Dev</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">5+</span>
-                    <span class="stat-label" lang="zh">年管理经验</span>
-                    <span class="stat-label" lang="en">Years Lead</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">20X</span>
-                    <span class="stat-label" lang="zh">营收增长</span>
-                    <span class="stat-label" lang="en">Revenue Growth</span>
-                </div>
+            <div class="stats-bar" id="stats-bar">
+                <!-- Stats will be populated dynamically -->
             </div>
         </div>
     </header>
 
     <section>
         <div class="container">
-            <h2 lang="zh">关于我</h2>
-            <h2 lang="en">About Me</h2>
-            <div class="about-grid">
-                <div class="about-item">
-                    <h3 lang="zh"><span class="about-icon">🤖</span>AI编程专家</h3>
-                    <h3 lang="en"><span class="about-icon">🤖</span>AI Programming Expert</h3>
-                    <p lang="zh">熟悉<strong>Spec-Kit</strong>等AI编程工具，擅长利用AI辅助开发提升效率。在<strong>AI语音交互</strong>领域有深入研究，主导开发了.NET原生音频3A处理SDK，具备AI驱动的软件开发实战经验。</p>
-                    <p lang="en">Proficient in AI programming tools like <strong>Spec-Kit</strong>, leveraging AI-assisted development to boost efficiency. Deep expertise in <strong>AI voice interaction</strong>, led development of .NET native audio 3A processing SDK with hands-on experience in AI-driven software development.</p>
-                </div>
-                
-                <div class="about-item">
-                    <h3 lang="zh"><span class="about-icon">💻</span>研发经验</h3>
-                    <h3 lang="en"><span class="about-icon">💻</span>Development Experience</h3>
-                    <p lang="zh">2002年-2017年，<strong>15年</strong>专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。</p>
-                    <p lang="en">2002-2017, <strong>15 years</strong> focused on .NET development as a full stack engineer. Committed to code quality with regular refactoring practices and maintaining high standards.</p>
-                </div>
-                
-                <div class="about-item">
-                    <h3 lang="zh"><span class="about-icon">🚀</span>DevOps专家</h3>
-                    <h3 lang="en"><span class="about-icon">🚀</span>DevOps Expert</h3>
-                    <p lang="zh">熟练掌握DevOps相关知识，擅长使用<strong>TeamCity</strong>进行持续构建与持续集成，推动团队自动化与效率提升。</p>
-                    <p lang="en">Proficient in DevOps practices, specializing in continuous integration with <strong>TeamCity</strong>, driving team automation and efficiency improvements.</p>
-                </div>
-                
-                <div class="about-item">
-                    <h3 lang="zh"><span class="about-icon">👥</span>管理经验</h3>
-                    <h3 lang="en"><span class="about-icon">👥</span>Management Experience</h3>
-                    <p lang="zh">2017-2023年，<strong>5年</strong>管理经验。曾任研发总监（<strong>20+</strong>团队）、运维总监（<strong>70+</strong>驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近<strong>2000万</strong>。</p>
-                    <p lang="en">2017-2023, <strong>5 years</strong> of management experience. Served as R&D Director (<strong>20+</strong> team) and Operations Director (<strong>70+</strong> on-site ops team). Specialized in building teams from scratch, growing annual operations contract value from 1M to nearly <strong>20M CNY</strong>.</p>
-                </div>
+            <h2 id="about-title"></h2>
+            <div class="about-grid" id="about-grid">
+                <!-- About items will be populated dynamically -->
             </div>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <h2 lang="zh">开源项目</h2>
-            <h2 lang="en">Open Source Projects</h2>
+            <h2 id="projects-title"></h2>
             
-            <div class="section-subtitle" lang="zh">主导项目</div>
-            <div class="section-subtitle" lang="en">Lead Projects</div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>DynamicWallpaper</h3>
-                    <span class="project-badge" lang="zh">主导开发</span>
-                    <span class="project-badge" lang="en">Lead Developer</span>
-                    <p lang="zh" class="active-zh">动态壁纸项目，提供精美的壁纸资源和动态壁纸体验。基于现代技术栈开发，用户体验流畅。</p>
-                    <p lang="en" class="active-en">Dynamic wallpaper project providing beautiful wallpaper resources and dynamic wallpaper experience. Built with modern technology stack for smooth user experience.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/gmij/DynamicWallpaper" class="btn" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="zh">访问站点</a>
-                        <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="en">Visit Site</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Audio3A_CSharp</h3>
-                    <span class="project-badge" lang="zh">AI驱动</span>
-                    <span class="project-badge" lang="en">AI-Powered</span>
-                    <p lang="zh" class="active-zh">完全由AI编写的.NET原生音频3A处理SDK。支持降噪、回声消除、自动增益等音频处理功能。</p>
-                    <p lang="en" class="active-en">AI-written .NET native audio 3A processing SDK. Supports noise reduction, echo cancellation, auto gain control and more.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/gmij/Audio3A_CSharp" class="btn" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3 lang="zh" class="active-zh">绿色软件下载站</h3>
-                    <h3 lang="en" class="active-en">Green Software Download Site</h3>
-                    <span class="project-badge" lang="zh">AI驱动</span>
-                    <span class="project-badge" lang="en">AI-Powered</span>
-                    <p lang="zh" class="active-zh">完全由AI编写的资源下载站，提供绿色、安全的软件下载服务。注重用户体验与资源质量。</p>
-                    <p lang="en" class="active-en">AI-written resource download site providing green, secure software downloads. Focus on user experience and resource quality.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/gmij/gmij.github.io/tree/main/soft" class="btn" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://gmij.win/soft/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="zh">访问站点</a>
-                        <a href="https://gmij.win/soft/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="en">Visit Site</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Children Image</h3>
-                    <span class="project-badge" lang="zh">AI驱动</span>
-                    <span class="project-badge" lang="en">AI-Powered</span>
-                    <p lang="zh" class="active-zh">完全由AI编写的儿童手抄报生成器，支持H5和微信小程序。一句话描述即可生成精美手抄报，专为幼儿园家长设计。</p>
-                    <p lang="en" class="active-en">AI-written children's handwritten newspaper generator, supporting H5 and WeChat Mini Program. Generate beautiful handwritten newspapers with one sentence, designed for kindergarten parents.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/gmij/children_image" class="btn" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://img.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="zh">访问站点</a>
-                        <a href="https://img.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer" lang="en">Visit Site</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3>ZerotierFix</h3>
-                    <span class="project-badge" lang="zh">AI驱动</span>
-                    <span class="project-badge" lang="en">AI-Powered</span>
-                    <p lang="zh" class="active-zh">完全由AI完善的ZeroTier安卓客户端，完善了全局路由功能。支持自建Moon服务器、自定义Planet配置、查看节点列表等功能，适合搭建个人VPN。</p>
-                    <p lang="en" class="active-en">AI-enhanced unofficial ZeroTier Android client with improved global routing. Supports self-hosted Moon servers, custom Planet config, peer list viewing, and more for personal VPN setup.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/gmij/ZerotierFix" class="btn" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
+            <div class="section-subtitle" id="projects-lead-title"></div>
+            <div class="projects-grid" id="lead-projects-grid">
+                <!-- Lead projects will be populated dynamically -->
             </div>
             
-            <div class="section-subtitle" lang="zh">贡献项目</div>
-            <div class="section-subtitle" lang="en">Contributor Projects</div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>SmartSql</h3>
-                    <span class="project-badge" lang="zh">活跃贡献者</span>
-                    <span class="project-badge" lang="en">Active Contributor</span>
-                    <p lang="zh" class="active-zh">高性能.NET ORM框架，属于DotNetCore社区项目。提供灵活的SQL映射与强大的性能优化能力。</p>
-                    <p lang="en" class="active-en">High-performance .NET ORM framework, part of DotNetCore community projects. Provides flexible SQL mapping and powerful performance optimization.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/dotnetcore/SmartSql" class="btn" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Ant Design Blazor</h3>
-                    <span class="project-badge" lang="zh">活跃贡献者</span>
-                    <span class="project-badge" lang="en">Active Contributor</span>
-                    <p lang="zh" class="active-zh">企业级Blazor UI组件库，基于Ant Design设计体系。为.NET开发者提供优质的前端组件解决方案。</p>
-                    <p lang="en" class="active-en">Enterprise-grade Blazor UI component library based on Ant Design system. Provides quality frontend component solutions for .NET developers.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/ant-design-blazor/ant-design-blazor" class="btn" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
+            <div class="section-subtitle" id="projects-contributor-title"></div>
+            <div class="projects-grid" id="contributor-projects-grid">
+                <!-- Contributor projects will be populated dynamically -->
             </div>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <h2 lang="zh">技能专长</h2>
-            <h2 lang="en">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 lang="zh">技术栈</h3>
-                    <h3 lang="en">Tech Stack</h3>
-                    <ul class="skill-list">
-                        <li lang="zh" class="active-zh">.NET / C# 开发</li>
-                        <li lang="en" class="active-en">.NET / C# Development</li>
-                        <li lang="zh" class="active-zh">全栈开发（前后端）</li>
-                        <li lang="en" class="active-en">Full Stack Development</li>
-                        <li lang="zh" class="active-zh">数据库设计与优化</li>
-                        <li lang="en" class="active-en">Database Design & Optimization</li>
-                        <li lang="zh" class="active-zh">微服务架构</li>
-                        <li lang="en" class="active-en">Microservices Architecture</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 lang="zh">DevOps</h3>
-                    <h3 lang="en">DevOps</h3>
-                    <ul class="skill-list">
-                        <li lang="zh" class="active-zh">持续集成/持续部署</li>
-                        <li lang="en" class="active-en">CI/CD</li>
-                        <li lang="zh" class="active-zh">TeamCity 构建管理</li>
-                        <li lang="en" class="active-en">TeamCity Build Management</li>
-                        <li lang="zh" class="active-zh">自动化测试</li>
-                        <li lang="en" class="active-en">Automated Testing</li>
-                        <li lang="zh" class="active-zh">容器化部署</li>
-                        <li lang="en" class="active-en">Containerized Deployment</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 lang="zh">团队管理</h3>
-                    <h3 lang="en">Team Management</h3>
-                    <ul class="skill-list">
-                        <li lang="zh" class="active-zh">团队从0到1组建</li>
-                        <li lang="en" class="active-en">Building Teams from Scratch</li>
-                        <li lang="zh" class="active-zh">研发效能改进</li>
-                        <li lang="en" class="active-en">R&D Efficiency Improvement</li>
-                        <li lang="zh" class="active-zh">敏捷开发实践</li>
-                        <li lang="en" class="active-en">Agile Development Practices</li>
-                        <li lang="zh" class="active-zh">技术决策与架构设计</li>
-                        <li lang="en" class="active-en">Tech Decision & Architecture Design</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 lang="zh">AI编程</h3>
-                    <h3 lang="en">AI Programming</h3>
-                    <ul class="skill-list">
-                        <li lang="zh" class="active-zh">Spec-Kit 工具应用</li>
-                        <li lang="en" class="active-en">Spec-Kit Tool Application</li>
-                        <li lang="zh" class="active-zh">AI辅助开发</li>
-                        <li lang="en" class="active-en">AI-Assisted Development</li>
-                        <li lang="zh" class="active-zh">AI语音交互技术</li>
-                        <li lang="en" class="active-en">AI Voice Interaction</li>
-                        <li lang="zh" class="active-zh">音频3A处理</li>
-                        <li lang="en" class="active-en">Audio 3A Processing</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 lang="zh">核心理念</h3>
-                    <h3 lang="en">Core Values</h3>
-                    <ul class="skill-list">
-                        <li lang="zh" class="active-zh">代码质量与重构</li>
-                        <li lang="en" class="active-en">Code Quality & Refactoring</li>
-                        <li lang="zh" class="active-zh">持续学习与创新</li>
-                        <li lang="en" class="active-en">Continuous Learning & Innovation</li>
-                        <li lang="zh" class="active-zh">开源社区贡献</li>
-                        <li lang="en" class="active-en">Open Source Contribution</li>
-                        <li lang="zh" class="active-zh">带领团队取得胜利</li>
-                        <li lang="en" class="active-en">Leading Teams to Victory</li>
-                    </ul>
-                </div>
+            <h2 id="skills-title"></h2>
+            <div class="skills-grid" id="skills-grid">
+                <!-- Skills will be populated dynamically -->
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>© 2024 GMIJ. All rights reserved.</p>
-            <p>
-                <a href="https://github.com/gmij" target="_blank" rel="noopener noreferrer">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                    GitHub
-                </a>
-                <span lang="zh" class="active-zh"> · <a href="https://dw.gmij.win" target="_blank" rel="noopener noreferrer">壁纸墙</a> · <a href="https://gmij.win/soft/" target="_blank" rel="noopener noreferrer">软件下载站</a></span>
-                <span lang="en" class="active-en"> · <a href="https://dw.gmij.win" target="_blank" rel="noopener noreferrer">Gallery</a> · <a href="https://gmij.win/soft/" target="_blank" rel="noopener noreferrer">Software</a></span>
+            <p id="footer-copyright"></p>
+            <p id="footer-links">
+                <!-- Footer links will be populated dynamically -->
             </p>
         </div>
     </footer>
     
     <script>
-        // Language detection and switching
-        function toggleLanguage() {
-            const html = document.documentElement;
-            const langText = document.getElementById('lang-text');
-            const currentLang = html.getAttribute('lang');
+        // Global state
+        let currentLang = 'en';
+        let contentData = null;
+        
+        // GitHub icon SVG
+        const githubIconSVG = `<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>`;
+        
+        // Load language data
+        async function loadLanguageData(lang) {
+            try {
+                const response = await fetch(`/data/${lang}.json`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${lang}.json`);
+                }
+                contentData = await response.json();
+                renderPage();
+            } catch (error) {
+                console.error('Error loading language data:', error);
+                // Fallback to English if current language fails
+                if (lang !== 'en') {
+                    currentLang = 'en';
+                    loadLanguageData('en');
+                }
+            }
+        }
+        
+        // Render page content
+        function renderPage() {
+            if (!contentData) return;
             
-            if (currentLang === 'en') {
-                html.setAttribute('lang', 'zh-CN');
-                langText.textContent = 'EN';
-                localStorage.setItem('preferredLanguage', 'zh-CN');
-                updatePageTitle('zh-CN');
-            } else {
-                html.setAttribute('lang', 'en');
-                langText.textContent = '中文';
-                localStorage.setItem('preferredLanguage', 'en');
-                updatePageTitle('en');
-            }
+            // Update meta tags
+            updateMetaTags();
+            
+            // Update header
+            document.getElementById('header-name').textContent = contentData.header.name;
+            document.getElementById('header-tagline').textContent = contentData.header.tagline;
+            document.getElementById('header-subtitle').textContent = contentData.header.subtitle;
+            
+            // Update stats
+            renderStats();
+            
+            // Update about section
+            document.getElementById('about-title').textContent = contentData.about.title;
+            renderAbout();
+            
+            // Update projects section
+            document.getElementById('projects-title').textContent = contentData.projects.title;
+            document.getElementById('projects-lead-title').textContent = contentData.projects.leadTitle;
+            document.getElementById('projects-contributor-title').textContent = contentData.projects.contributorTitle;
+            renderProjects();
+            
+            // Update skills section
+            document.getElementById('skills-title').textContent = contentData.skills.title;
+            renderSkills();
+            
+            // Update footer
+            renderFooter();
+            
+            // Update language button
+            document.getElementById('lang-text').textContent = contentData.ui.langButton;
         }
         
-        function updatePageTitle(lang) {
-            if (lang === 'zh-CN') {
-                document.title = 'GMIJ - 全栈工程师 | 15年研发经验 | 开源贡献者';
-            } else {
-                document.title = 'GMIJ - Full Stack Engineer | 15 Years Dev Experience | Open Source Contributor';
-            }
+        // Update meta tags
+        function updateMetaTags() {
+            document.title = contentData.meta.title;
+            document.querySelector('meta[name="title"]').setAttribute('content', contentData.meta.title);
+            document.querySelector('meta[name="description"]').setAttribute('content', contentData.meta.description);
+            document.querySelector('meta[name="keywords"]').setAttribute('content', contentData.meta.keywords);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', contentData.meta.title);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', contentData.meta.description);
+            document.querySelector('meta[name="twitter:title"]').setAttribute('content', contentData.meta.title);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', contentData.meta.description);
         }
         
-        // Auto-detect browser language on page load
+        // Render stats
+        function renderStats() {
+            const statsBar = document.getElementById('stats-bar');
+            statsBar.innerHTML = contentData.header.stats.map(stat => `
+                <div class="stat-item">
+                    <span class="stat-number">${stat.number}</span>
+                    <span class="stat-label">${stat.label}</span>
+                </div>
+            `).join('');
+        }
+        
+        // Render about section
+        function renderAbout() {
+            const aboutGrid = document.getElementById('about-grid');
+            aboutGrid.innerHTML = contentData.about.items.map(item => `
+                <div class="about-item">
+                    <h3><span class="about-icon">${item.icon}</span>${item.title}</h3>
+                    <p>${item.description}</p>
+                </div>
+            `).join('');
+        }
+        
+        // Render projects
+        function renderProjects() {
+            // Lead projects
+            const leadGrid = document.getElementById('lead-projects-grid');
+            leadGrid.innerHTML = contentData.projects.leadProjects.map(project => `
+                <div class="project-card">
+                    <h3>${project.name}</h3>
+                    <span class="project-badge">${project.badge}</span>
+                    <p>${project.description}</p>
+                    <div class="project-links">
+                        ${project.github ? `
+                            <a href="${project.github}" class="btn" target="_blank" rel="noopener noreferrer">
+                                ${githubIconSVG}
+                                ${contentData.ui.githubLabel}
+                            </a>
+                        ` : ''}
+                        ${project.website ? `
+                            <a href="${project.website}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                ${project.websiteLabel}
+                            </a>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+            
+            // Contributor projects
+            const contributorGrid = document.getElementById('contributor-projects-grid');
+            contributorGrid.innerHTML = contentData.projects.contributorProjects.map(project => `
+                <div class="project-card">
+                    <h3>${project.name}</h3>
+                    <span class="project-badge">${project.badge}</span>
+                    <p>${project.description}</p>
+                    <div class="project-links">
+                        ${project.github ? `
+                            <a href="${project.github}" class="btn" target="_blank" rel="noopener noreferrer">
+                                ${githubIconSVG}
+                                ${contentData.ui.githubLabel}
+                            </a>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Render skills
+        function renderSkills() {
+            const skillsGrid = document.getElementById('skills-grid');
+            skillsGrid.innerHTML = contentData.skills.categories.map(category => `
+                <div class="skill-category">
+                    <h3>${category.name}</h3>
+                    <ul class="skill-list">
+                        ${category.items.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+            `).join('');
+        }
+        
+        // Render footer
+        function renderFooter() {
+            document.getElementById('footer-copyright').textContent = contentData.footer.copyright;
+            
+            const linksHTML = contentData.footer.links.map((link, index) => {
+                const prefix = index > 0 ? ' · ' : '';
+                if (link.label === contentData.ui.githubLabel) {
+                    return `${prefix}<a href="${link.url}" target="_blank" rel="noopener noreferrer">
+                        ${githubIconSVG}
+                        ${link.label}
+                    </a>`;
+                }
+                return `${prefix}<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`;
+            }).join('');
+            
+            document.getElementById('footer-links').innerHTML = linksHTML;
+        }
+        
+        // Toggle language
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            localStorage.setItem('preferredLanguage', currentLang);
+            document.documentElement.setAttribute('lang', currentLang === 'zh' ? 'zh-CN' : 'en');
+            loadLanguageData(currentLang);
+        }
+        
+        // Initialize page
         (function() {
             const savedLang = localStorage.getItem('preferredLanguage');
             const browserLang = navigator.language || navigator.userLanguage;
-            const html = document.documentElement;
-            const langText = document.getElementById('lang-text');
             
             // Determine which language to use
-            let targetLang = 'en'; // Default to English
-            
             if (savedLang) {
-                // Use saved preference
-                targetLang = savedLang;
+                currentLang = savedLang;
             } else if (browserLang && browserLang.startsWith('zh')) {
-                // Browser language is Chinese
-                targetLang = 'zh-CN';
+                currentLang = 'zh';
+            } else {
+                currentLang = 'en';
             }
             
-            // Apply the language
-            html.setAttribute('lang', targetLang);
-            langText.textContent = targetLang === 'zh-CN' ? 'EN' : '中文';
-            updatePageTitle(targetLang);
+            // Set HTML lang attribute
+            document.documentElement.setAttribute('lang', currentLang === 'zh' ? 'zh-CN' : 'en');
+            
+            // Load content
+            loadLanguageData(currentLang);
         })();
     </script>
 </body>
