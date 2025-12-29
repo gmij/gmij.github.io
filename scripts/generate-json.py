@@ -168,7 +168,7 @@ Use proper English translations for the English version.
             en_section = content[en_start:en_end].strip()
             en_json_str = extract_json_from_markdown(en_section)
             # Try to find complete JSON if extraction failed
-            if not en_json_str.startswith('{'):
+            if not en_json_str or not en_json_str.startswith('{'):
                 en_json_str = find_complete_json(en_section)
         
         if "ZH_JSON:" in content:
