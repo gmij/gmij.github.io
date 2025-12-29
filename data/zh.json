@@ -1,19 +1,147 @@
 {
-  "name": "GMIJ",
-  "tagline": "Experienced Developer and Manager",
-  "subtitle": "15 years in .NET development, 5 years in management, and a passion for open source and AI-driven projects.",
-  "stats": [
-    {
-      "number": "15+",
-      "label": "Years of Development Experience"
-    },
-    {
-      "number": "5+",
-      "label": "Years of Management Experience"
-    },
-    {
-      "number": "20M",
-      "label": "Annual Operations Revenue Growth (CNY)"
-    }
-  ]
+  "meta": {
+    "title": "GMIJ - 个人介绍",
+    "description": "GMIJ的个人介绍，展示15年.NET开发经验、5年管理经验以及开源项目贡献。",
+    "keywords": "GMIJ, .NET, DevOps, TeamCity, 研发, 管理, 开源, AI项目"
+  },
+  "header": {
+    "name": "GMIJ",
+    "tagline": "资深开发者与管理者",
+    "subtitle": "15年.NET开发经验，5年管理经验，热衷于开源项目和AI驱动的创新。",
+    "stats": [
+      {
+        "number": "15+",
+        "label": "年研发经验"
+      },
+      {
+        "number": "5+",
+        "label": "年管理经验"
+      },
+      {
+        "number": "2000万",
+        "label": "年运维合同额（人民币）"
+      }
+    ]
+  },
+  "about": {
+    "title": "关于我",
+    "items": [
+      {
+        "icon": "💻",
+        "title": "全栈开发",
+        "description": "15年研发经验（2002-2017），专注.NET开发，全栈工程师，对代码有着一定的精神洁癖，不定期进行重构。"
+      },
+      {
+        "icon": "🚀",
+        "title": "DevOps专家",
+        "description": "熟练掌握DevOps相关知识，擅长使用TeamCity进行持续构建，致力于提升研发效能。"
+      },
+      {
+        "icon": "👥",
+        "title": "团队管理",
+        "description": "5年管理经验（2017-2023），曾任研发总监（研发团队20人+）、运维总监（驻场运维团队70人+），擅长从0到1组建团队。"
+      },
+      {
+        "icon": "📈",
+        "title": "业绩提升",
+        "description": "擅长研发效能改进以及运维管理改进，将年运维合同额从100万提升到近2000万。管理思路：带领团队不断取得胜利。"
+      }
+    ]
+  },
+  "projects": {
+    "title": "开源项目",
+    "leadTitle": "主导项目",
+    "contributorTitle": "贡献项目",
+    "leadProjects": [
+      {
+        "name": "DynamicWallpaper",
+        "badge": "⭐ 动态壁纸",
+        "description": "一个功能强大的动态壁纸应用，支持多种壁纸源和自定义设置。",
+        "github": "https://github.com/gmij/DynamicWallpaper",
+        "website": "https://dw.gmij.win",
+        "websiteLabel": "壁纸墙"
+      },
+      {
+        "name": "Audio3A_CSharp",
+        "badge": "🤖 AI编写",
+        "description": "一个完全由AI编写的.NET原生音频3A处理SDK，提供降噪、回声消除等功能。",
+        "github": "https://github.com/gmij/Audio3A_CSharp"
+      },
+      {
+        "name": "绿色软件下载站",
+        "badge": "🤖 AI编写",
+        "description": "一个完全由AI编写的资源下载站，提供绿色软件下载服务。",
+        "github": "https://github.com/gmij/soft",
+        "website": "https://gmij.win/soft",
+        "websiteLabel": "访问网站"
+      },
+      {
+        "name": "Children Image",
+        "badge": "🤖 AI编写",
+        "description": "AI幼画 - 一个完全由AI编写的儿童手抄报生成器，帮助孩子快速生成精美手抄报。",
+        "github": "https://github.com/gmij/children_image",
+        "website": "https://img.gmij.win",
+        "websiteLabel": "访问网站"
+      },
+      {
+        "name": "ZerotierFix",
+        "badge": "🤖 AI完善",
+        "description": "一个完全由AI完善的ZeroTier安卓客户端，用于个人VPN服务。",
+        "github": "https://github.com/gmij/ZerotierFix"
+      }
+    ],
+    "contributorProjects": [
+      {
+        "name": "SmartSql",
+        "badge": "⚡ ORM框架",
+        "description": "高性能、可扩展的.NET ORM框架，支持多数据库和动态SQL。",
+        "github": "https://github.com/dotnetcore/SmartSql"
+      },
+      {
+        "name": "Ant Design Blazor",
+        "badge": "🎨 UI组件库",
+        "description": "基于Ant Design的Blazor企业级UI组件库。",
+        "github": "https://github.com/ant-design-blazor/ant-design-blazor"
+      }
+    ]
+  },
+  "skills": {
+    "title": "技能专长",
+    "categories": [
+      {
+        "name": "开发技术",
+        "items": [".NET/C#", "全栈开发", "代码重构", "软件架构"]
+      },
+      {
+        "name": "DevOps",
+        "items": ["TeamCity", "持续集成", "持续部署", "研发效能"]
+      },
+      {
+        "name": "管理能力",
+        "items": ["团队组建", "研发管理", "运维管理", "业绩提升"]
+      },
+      {
+        "name": "AI应用",
+        "items": ["AI辅助开发", "AI驱动项目", "技术创新"]
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025 GMIJ. 保留所有权利。",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/gmij"
+      },
+      {
+        "label": "隐私声明",
+        "url": "/PrivacyStatement"
+      }
+    ]
+  },
+  "ui": {
+    "langButton": "English",
+    "githubLabel": "GitHub",
+    "loading": "加载中..."
+  }
 }
