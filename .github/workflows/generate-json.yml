@@ -1,0 +1,50 @@
+name: Generate JSON from Content
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'CONTENT.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Generate JSON files
+        run: |
+          python scripts/generate-json.py
+      
+      - name: Validate JSON files
+        run: |
+          echo "Validating en.json..."
+          python -m json.tool data/en.json > /dev/null && echo "✓ en.json is valid"
+          echo "Validating zh.json..."
+          python -m json.tool data/zh.json > /dev/null && echo "✓ zh.json is valid"
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet data/*.json || echo "changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/en.json data/zh.json
+          git commit -m "Auto-generate JSON files from CONTENT.md [skip ci]"
+          git push

@@ -5,9 +5,6 @@
     "keywords": "GMIJ, 全栈工程师, .NET开发, DevOps, 开源, SmartSql, Ant Design Blazor, DynamicWallpaper, Audio3A_CSharp, 技术管理, 研发总监, AI编程, Spec-Kit, AI语音交互"
   },
   "header": {
-    "name": "GMIJ",
-    "tagline": "从代码到管理，从0到1的实战专家",
-    "subtitle": "全栈工程师 · 开源贡献者 · 技术管理专家",
     "stats": [
       {
         "number": "15+",
@@ -21,37 +18,37 @@
         "number": "20X",
         "label": "营收增长"
       }
-    ]
+    ],
+    "name": "GMIJ",
+    "tagline": "从代码到管理，从0到1的实战专家",
+    "subtitle": "全栈工程师 · 开源贡献者 · 技术管理专家"
   },
   "about": {
-    "title": "关于我",
     "items": [
       {
         "icon": "🤖",
         "title": "AI编程专家",
-        "description": "熟悉<strong>Spec-Kit</strong>等AI编程工具，擅长利用AI辅助开发提升效率。在<strong>AI语音交互</strong>领域有深入研究，主导开发了.NET原生音频3A处理SDK，具备AI驱动的软件开发实战经验。"
+        "description": "熟悉**Spec-Kit**等AI编程工具，擅长利用AI辅助开发提升效率。在**AI语音交互**领域有深入研究，主导开发了.NET原生音频3A处理SDK，具备AI驱动的软件开发实战经验。"
       },
       {
         "icon": "💻",
         "title": "研发经验",
-        "description": "2002年-2017年，<strong>15年</strong>专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。"
+        "description": "2002年-2017年，**15年**专注.NET开发，全栈工程师。对代码有着一定的精神洁癖，不定期进行重构，追求代码质量与可维护性。"
       },
       {
         "icon": "🚀",
         "title": "DevOps专家",
-        "description": "熟练掌握DevOps相关知识，擅长使用<strong>TeamCity</strong>进行持续构建与持续集成，推动团队自动化与效率提升。"
+        "description": "熟练掌握DevOps相关知识，擅长使用**TeamCity**进行持续构建与持续集成，推动团队自动化与效率提升。"
       },
       {
         "icon": "👥",
         "title": "管理经验",
-        "description": "2017-2023年，<strong>5年</strong>管理经验。曾任研发总监（<strong>20+</strong>团队）、运维总监（<strong>70+</strong>驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近<strong>2000万</strong>。"
+        "description": "2017-2023年，**5年**管理经验。曾任研发总监（**20+**团队）、运维总监（**70+**驻场运维团队）。擅长团队从0到1组建，年运维合同额从100万提升至近**2000万**。"
       }
-    ]
+    ],
+    "title": "关于我"
   },
   "projects": {
-    "title": "开源项目",
-    "leadTitle": "主导项目",
-    "contributorTitle": "贡献项目",
     "leadProjects": [
       {
         "name": "DynamicWallpaper",
@@ -90,23 +87,12 @@
         "github": "https://github.com/gmij/ZerotierFix"
       }
     ],
-    "contributorProjects": [
-      {
-        "name": "SmartSql",
-        "badge": "活跃贡献者",
-        "description": "高性能.NET ORM框架，属于DotNetCore社区项目。提供灵活的SQL映射与强大的性能优化能力。",
-        "github": "https://github.com/dotnetcore/SmartSql"
-      },
-      {
-        "name": "Ant Design Blazor",
-        "badge": "活跃贡献者",
-        "description": "企业级Blazor UI组件库，基于Ant Design设计体系。为.NET开发者提供优质的前端组件解决方案。",
-        "github": "https://github.com/ant-design-blazor/ant-design-blazor"
-      }
-    ]
+    "contributorProjects": [],
+    "title": "开源项目",
+    "leadTitle": "主导项目",
+    "contributorTitle": "贡献项目"
   },
   "skills": {
-    "title": "技能专长",
     "categories": [
       {
         "name": "技术栈",
@@ -153,10 +139,10 @@
           "带领团队取得胜利"
         ]
       }
-    ]
+    ],
+    "title": "技能专长"
   },
   "footer": {
-    "copyright": "© 2024 GMIJ. All rights reserved.",
     "links": [
       {
         "label": "GitHub",
@@ -170,7 +156,8 @@
         "label": "软件下载站",
         "url": "https://gmij.win/soft/"
       }
-    ]
+    ],
+    "copyright": "© 2024 GMIJ. All rights reserved."
   },
   "ui": {
     "langButton": "EN",
