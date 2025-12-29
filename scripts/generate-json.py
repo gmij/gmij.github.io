@@ -76,7 +76,7 @@ Use proper English translations for the English version.
         import requests
         
         # Use GitHub Models API
-        api_url = "https://models.inference.ai.azure.com/chat/completions"
+        api_url = "https://models.github.ai/inference/chat/completions"
         
         headers = {
             "Content-Type": "application/json",
@@ -94,7 +94,7 @@ Use proper English translations for the English version.
                     "content": prompt
                 }
             ],
-            "model": "gpt-4o",
+            "model": "openai/gpt-4o",
             "temperature": 0.3,
             "max_tokens": 4000
         }
