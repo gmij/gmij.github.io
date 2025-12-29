@@ -112,43 +112,80 @@ Use proper English translations for the English version.
         en_json_str = None
         zh_json_str = None
         
+        def extract_json_from_markdown(text):
+            """Extract JSON from markdown code blocks"""
+            # Remove markdown code blocks
+            text = text.strip()
+            if text.startswith("```json"):
+                text = text[7:]
+            elif text.startswith("```"):
+                text = text[3:]
+            if text.endswith("```"):
+                text = text[:-3]
+            return text.strip()
+        
+        def find_complete_json(text, start_pos=0):
+            """Find a complete JSON object starting from start_pos"""
+            # Find the first '{' after start_pos
+            idx = text.find('{', start_pos)
+            if idx == -1:
+                return None
+            
+            # Count braces to find matching closing brace
+            brace_count = 0
+            in_string = False
+            escape_next = False
+            
+            for i in range(idx, len(text)):
+                char = text[i]
+                
+                if escape_next:
+                    escape_next = False
+                    continue
+                    
+                if char == '\\':
+                    escape_next = True
+                    continue
+                    
+                if char == '"' and not escape_next:
+                    in_string = not in_string
+                    continue
+                    
+                if not in_string:
+                    if char == '{':
+                        brace_count += 1
+                    elif char == '}':
+                        brace_count -= 1
+                        if brace_count == 0:
+                            return text[idx:i+1]
+            
+            return None
+        
         # Try to find EN_JSON and ZH_JSON markers
         if "EN_JSON:" in content:
             en_start = content.find("EN_JSON:") + len("EN_JSON:")
             en_end = content.find("ZH_JSON:") if "ZH_JSON:" in content else len(content)
-            en_json_str = content[en_start:en_end].strip()
-            
-            # Remove markdown code blocks if present
-            if en_json_str.startswith("```json"):
-                en_json_str = en_json_str[7:]
-            if en_json_str.startswith("```"):
-                en_json_str = en_json_str[3:]
-            if en_json_str.endswith("```"):
-                en_json_str = en_json_str[:-3]
-            en_json_str = en_json_str.strip()
+            en_section = content[en_start:en_end].strip()
+            en_json_str = extract_json_from_markdown(en_section)
+            # Try to find complete JSON if extraction failed
+            if not en_json_str.startswith('{'):
+                en_json_str = find_complete_json(en_section)
         
         if "ZH_JSON:" in content:
             zh_start = content.find("ZH_JSON:") + len("ZH_JSON:")
-            zh_json_str = content[zh_start:].strip()
-            
-            # Remove markdown code blocks if present
-            if zh_json_str.startswith("```json"):
-                zh_json_str = zh_json_str[7:]
-            if zh_json_str.startswith("```"):
-                zh_json_str = zh_json_str[3:]
-            if zh_json_str.endswith("```"):
-                zh_json_str = zh_json_str[:-3]
-            zh_json_str = zh_json_str.strip()
+            zh_section = content[zh_start:].strip()
+            zh_json_str = extract_json_from_markdown(zh_section)
+            # Try to find complete JSON if extraction failed
+            if not zh_json_str or not zh_json_str.startswith('{'):
+                zh_json_str = find_complete_json(zh_section)
         
-        # If markers not found, try to parse the entire response as JSON array
+        # If markers not found, try to find two complete JSON objects
         if not en_json_str or not zh_json_str:
-            # Try to find JSON objects in the content
-            import re
-            json_pattern = r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}'
-            matches = re.findall(json_pattern, content, re.DOTALL)
-            if len(matches) >= 2:
-                en_json_str = matches[0]
-                zh_json_str = matches[1]
+            en_json_str = find_complete_json(content, 0)
+            if en_json_str:
+                # Find the next JSON object after the first one
+                next_start = content.find(en_json_str) + len(en_json_str)
+                zh_json_str = find_complete_json(content, next_start)
         
         if not en_json_str or not zh_json_str:
             print("Error: Could not parse AI response")
@@ -163,6 +200,29 @@ Use proper English translations for the English version.
             print(f"Error parsing JSON: {e}")
             print("EN JSON:", en_json_str[:200])
             print("ZH JSON:", zh_json_str[:200])
+            return 1
+        
+        # Validate JSON against schema
+        schema_obj = json.loads(schema)
+        required_fields = schema_obj.get('required', [])
+        
+        def validate_json(data, name):
+            """Validate JSON has all required fields"""
+            missing_fields = []
+            for field in required_fields:
+                if field not in data:
+                    missing_fields.append(field)
+            
+            if missing_fields:
+                print(f"Error: {name} is missing required fields: {missing_fields}")
+                return False
+            
+            print(f"✓ {name} has all required fields: {required_fields}")
+            return True
+        
+        if not validate_json(en_data, "en.json"):
+            return 1
+        if not validate_json(zh_data, "zh.json"):
             return 1
         
         # Write JSON files
