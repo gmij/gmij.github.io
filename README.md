@@ -17,9 +17,9 @@
 
 [Audio3A_CSharp](https://github.com/gmij/Audio3A_CSharp) =====>> 一个完全由AI编写的.NET原生音频3A处理SDK
 
-[绿色软件下载站](https://gmij.win/soft/)  =====>> 一个完全由AI编写的资源下载站
+[绿色软件下载站](https://github.com/gmij/soft)  =====>> [绿色软件下载站](https://gmij.win/soft)一个完全由AI编写的资源下载站
 
-[children_image](https://github.com/gmij/children_image) =====>> [img.gmij.win](https://img.gmij.win) 一个完全由AI编写的儿童手抄报生成器
+[children_image](https://github.com/gmij/children_image) =====>> [Ai幼画](https://img.gmij.win) 一个完全由AI编写的儿童手抄报生成器
 
 [ZerotierFix](https://github.com/gmij/ZerotierFix) =====>> 一个完全由AI完善的ZeroTier安卓客户端，用于个人VPN
 
