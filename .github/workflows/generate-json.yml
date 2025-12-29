@@ -1,11 +1,11 @@
-name: Generate JSON from Content
+name: Generate JSON from README
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'CONTENT.md'
+      - 'README.md'
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,13 @@ jobs:
         with:
           python-version: '3.11'
       
-      - name: Generate JSON files
+      - name: Install dependencies
+        run: |
+          pip install openai
+      
+      - name: Generate JSON files using AI
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python scripts/generate-json.py
       
@@ -46,5 +52,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/en.json data/zh.json
-          git commit -m "Auto-generate JSON files from CONTENT.md [skip ci]"
+          git commit -m "Auto-generate JSON files from README.md using AI [skip ci]"
           git push
