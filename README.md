@@ -23,7 +23,62 @@
 
 [ZerotierFix](https://github.com/gmij/ZerotierFix) =====>> 一个完全由AI完善的ZeroTier安卓客户端，用于个人VPN
 
+---
 
+## 构建说明 / Build Instructions
 
+本网站使用自动化构建流程来优化SEO（搜索引擎优化）。
 
+### 工作流程
 
+1. **README.md → JSON**: 当 README.md 更新时，GitHub Actions 自动使用 AI 生成 `data/en.json` 和 `data/zh.json`
+2. **JSON → HTML**: 生成的 JSON 文件会被转换为带有完整内容的静态 HTML 文件（`index.html` 和 `index-en.html`）
+
+### SEO 优化
+
+- ✅ **预渲染内容**: 所有内容直接包含在 HTML 中，无需 JavaScript 加载
+- ✅ **完整的元标签**: 标题、描述、关键词都从 JSON 数据填充
+- ✅ **Open Graph 标签**: 优化社交媒体分享
+- ✅ **Twitter Card 标签**: 优化 Twitter 分享
+- ✅ **规范化 URL**: 正确的 URL 规范化
+- ✅ **Hreflang 标签**: 多语言 SEO 支持
+- ✅ **JSON-LD 结构化数据**: 搜索引擎富文本摘要
+
+### 手动构建
+
+如果需要手动重新生成 HTML 文件：
+
+```bash
+# 生成 HTML 文件
+python scripts/generate-html.py
+```
+
+---
+
+## Build Instructions
+
+This website uses an automated build process to optimize for SEO (Search Engine Optimization).
+
+### Workflow
+
+1. **README.md → JSON**: When README.md is updated, GitHub Actions automatically uses AI to generate `data/en.json` and `data/zh.json`
+2. **JSON → HTML**: The generated JSON files are converted to static HTML files with full content (`index.html` and `index-en.html`)
+
+### SEO Optimizations
+
+- ✅ **Pre-rendered content**: All content is included directly in HTML, no JavaScript loading required
+- ✅ **Complete meta tags**: Title, description, keywords populated from JSON data
+- ✅ **Open Graph tags**: Optimized for social media sharing
+- ✅ **Twitter Card tags**: Optimized for Twitter sharing
+- ✅ **Canonical URLs**: Proper URL canonicalization
+- ✅ **Hreflang tags**: Multi-language SEO support
+- ✅ **JSON-LD structured data**: Rich snippets for search engines
+
+### Manual Build
+
+To manually regenerate the HTML files:
+
+```bash
+# Generate HTML files
+python scripts/generate-html.py
+```
