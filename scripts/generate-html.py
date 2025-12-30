@@ -34,7 +34,7 @@ def render_about_items(items):
         html.append(f'''
             <div class="about-item">
                 <h3><span class="about-icon">{item["icon"]}</span>{escape(item["title"])}</h3>
-                <p>{item["description"]}</p>
+                <p>{escape(item["description"])}</p>
             </div>''')
     return ''.join(html)
 
@@ -63,7 +63,7 @@ def render_project_card(project, github_label):
         <div class="project-card">
             <h3>{escape(project["name"])}</h3>
             <span class="project-badge">{escape(project["badge"])}</span>
-            <p>{project["description"]}</p>
+            <p>{escape(project["description"])}</p>
             <div class="project-links">
                 {''.join(links)}
             </div>
@@ -681,11 +681,13 @@ def generate_html_file(data, lang_code, output_path):
     footer_links_html = render_footer_links(data['footer']['links'], data['ui']['githubLabel'])
     
     # Fill in the template
+    # Note: Meta tag content should NOT be HTML-escaped as they are in attribute values
+    # Only escape content that goes into HTML body
     html = template.format(
         lang='zh-CN' if lang_code == 'zh' else 'en',
-        title=escape(data['meta']['title']),
-        description=escape(data['meta']['description']),
-        keywords=escape(data['meta']['keywords']),
+        title=data['meta']['title'],
+        description=data['meta']['description'],
+        keywords=data['meta']['keywords'],
         canonical_url=canonical_url,
         lang_switch_url=lang_switch_url,
         lang_button_text=escape(lang_button_text),
