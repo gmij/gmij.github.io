@@ -1,4 +1,4 @@
-name: Generate JSON from README
+name: Generate JSON and HTML from README
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'README.md'
+      - 'data/*.json'
   workflow_dispatch:
 
 permissions:
@@ -42,16 +43,21 @@ jobs:
           echo "Validating zh.json..."
           python -m json.tool data/zh.json > /dev/null && echo "✓ zh.json is valid"
       
+      - name: Generate HTML files from JSON
+        run: |
+          echo "Generating HTML files for SEO..."
+          python scripts/generate-html.py
+      
       - name: Check for changes
         id: check_changes
         run: |
-          git diff --quiet data/*.json || echo "changes=true" >> $GITHUB_OUTPUT
+          git diff --quiet data/*.json index.html index-en.html || echo "changes=true" >> $GITHUB_OUTPUT
       
       - name: Commit and push if changed
         if: steps.check_changes.outputs.changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/en.json data/zh.json
-          git commit -m "Auto-generate JSON files from README.md using GitHub AI [skip ci]"
+          git add data/en.json data/zh.json index.html index-en.html
+          git commit -m "Auto-generate JSON and HTML files from README.md [skip ci]"
           git push

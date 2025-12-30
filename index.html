@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Primary Meta Tags - will be updated dynamically -->
-    <title>GMIJ</title>
-    <meta name="title" content="GMIJ">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <!-- Primary Meta Tags -->
+    <title>GMIJ - 个人介绍</title>
+    <meta name="title" content="GMIJ - 个人介绍">
+    <meta name="description" content="GMIJ的个人介绍，展示15年.NET开发经验、5年管理经验以及开源项目贡献。">
+    <meta name="keywords" content="GMIJ, .NET, DevOps, TeamCity, 研发, 管理, 开源, AI项目">
     <meta name="author" content="GMIJ">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gmij.win/">
-    <meta property="og:title" content="GMIJ">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="GMIJ - 个人介绍">
+    <meta property="og:description" content="GMIJ的个人介绍，展示15年.NET开发经验、5年管理经验以及开源项目贡献。">
     <meta property="og:site_name" content="GMIJ Personal Page">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gmij.win/">
-    <meta name="twitter:title" content="GMIJ">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="GMIJ - 个人介绍">
+    <meta name="twitter:description" content="GMIJ的个人介绍，展示15年.NET开发经验、5年管理经验以及开源项目贡献。">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gmij.win/">
+    
+    <!-- Alternate language versions -->
+    <link rel="alternate" hreflang="en" href="https://gmij.win/index-en.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://gmij.win/">
+    <link rel="alternate" hreflang="x-default" href="https://gmij.win/">
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -38,7 +43,7 @@
       "url": "https://gmij.win",
       "jobTitle": "Full Stack Engineer",
       "description": "15 years .NET full stack development experience, 5 years technical management experience",
-      "knowsAbout": [".NET Development", "DevOps", "Continuous Integration", "Team Management", "Full Stack Development"],
+      "knowsAbout": [".NET Development", "DevOps", "Continuous Integration", "Team Management", "Full Stack Development", "AI Programming", "AI Voice Interaction"],
       "sameAs": [
         "https://github.com/gmij",
         "https://github.com/dotnetcore/SmartSql",
@@ -129,7 +134,6 @@
             background-clip: text;
         }
         
-        /* Fallback for browsers that don't support background-clip */
         @supports not (background-clip: text) {
             header h1 {
                 color: var(--text-primary);
@@ -480,279 +484,228 @@
 <body>
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <button id="lang-btn" class="lang-btn" onclick="toggleLanguage()">
-            <span id="lang-text">...</span>
-        </button>
+        <a href="/index-en.html" class="lang-btn">
+            <span>English</span>
+        </a>
     </div>
 
     <header>
         <div class="container">
-            <h1 id="header-name">GMIJ</h1>
-            <p class="tagline" id="header-tagline"></p>
-            <p class="subtitle" id="header-subtitle"></p>
+            <h1>GMIJ</h1>
+            <p class="tagline">资深开发者与管理者</p>
+            <p class="subtitle">15年.NET开发经验，5年管理经验，热衷于开源项目和AI驱动的创新。</p>
             
-            <div class="stats-bar" id="stats-bar">
-                <!-- Stats will be populated dynamically -->
+            <div class="stats-bar">
+                
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">年研发经验</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">年管理经验</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2000万</span>
+                <span class="stat-label">年运维合同额（人民币）</span>
+            </div>
             </div>
         </div>
     </header>
 
     <section>
         <div class="container">
-            <h2 id="about-title"></h2>
-            <div class="about-grid" id="about-grid">
-                <!-- About items will be populated dynamically -->
+            <h2>关于我</h2>
+            <div class="about-grid">
+                
+            <div class="about-item">
+                <h3><span class="about-icon">💻</span>全栈开发</h3>
+                <p>15年研发经验（2002-2017），专注.NET开发，全栈工程师，对代码有着一定的精神洁癖，不定期进行重构。</p>
+            </div>
+            <div class="about-item">
+                <h3><span class="about-icon">🚀</span>DevOps专家</h3>
+                <p>熟练掌握DevOps相关知识，擅长使用TeamCity进行持续构建，致力于提升研发效能。</p>
+            </div>
+            <div class="about-item">
+                <h3><span class="about-icon">👥</span>团队管理</h3>
+                <p>5年管理经验（2017-2023），曾任研发总监（研发团队20人+）、运维总监（驻场运维团队70人+），擅长从0到1组建团队。</p>
+            </div>
+            <div class="about-item">
+                <h3><span class="about-icon">📈</span>业绩提升</h3>
+                <p>擅长研发效能改进以及运维管理改进，将年运维合同额从100万提升到近2000万。管理思路：带领团队不断取得胜利。</p>
+            </div>
             </div>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <h2 id="projects-title"></h2>
+            <h2>开源项目</h2>
             
-            <div class="section-subtitle" id="projects-lead-title"></div>
-            <div class="projects-grid" id="lead-projects-grid">
-                <!-- Lead projects will be populated dynamically -->
+            <div class="section-subtitle">主导项目</div>
+            <div class="projects-grid">
+                
+        <div class="project-card">
+            <h3>DynamicWallpaper</h3>
+            <span class="project-badge">⭐ 动态壁纸</span>
+            <p>一个功能强大的动态壁纸应用，支持多种壁纸源和自定义设置。</p>
+            <div class="project-links">
+                
+            <a href="https://github.com/gmij/DynamicWallpaper" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+                GitHub
+            </a>
+            <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                壁纸墙
+            </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Audio3A_CSharp</h3>
+            <span class="project-badge">🤖 AI编写</span>
+            <p>一个完全由AI编写的.NET原生音频3A处理SDK，提供降噪、回声消除等功能。</p>
+            <div class="project-links">
+                
+            <a href="https://github.com/gmij/Audio3A_CSharp" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+                GitHub
+            </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>绿色软件下载站</h3>
+            <span class="project-badge">🤖 AI编写</span>
+            <p>一个完全由AI编写的资源下载站，提供绿色软件下载服务。</p>
+            <div class="project-links">
+                
+            <a href="https://github.com/gmij/soft" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+                GitHub
+            </a>
+            <a href="https://gmij.win/soft" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                访问网站
+            </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Children Image</h3>
+            <span class="project-badge">🤖 AI编写</span>
+            <p>AI幼画 - 一个完全由AI编写的儿童手抄报生成器，帮助孩子快速生成精美手抄报。</p>
+            <div class="project-links">
+                
+            <a href="https://github.com/gmij/children_image" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+                GitHub
+            </a>
+            <a href="https://img.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                访问网站
+            </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>ZerotierFix</h3>
+            <span class="project-badge">🤖 AI完善</span>
+            <p>一个完全由AI完善的ZeroTier安卓客户端，用于个人VPN服务。</p>
+            <div class="project-links">
+                
+            <a href="https://github.com/gmij/ZerotierFix" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+                GitHub
+            </a>
+            </div>
+        </div>
             </div>
             
-            <div class="section-subtitle" id="projects-contributor-title"></div>
-            <div class="projects-grid" id="contributor-projects-grid">
-                <!-- Contributor projects will be populated dynamically -->
+            <div class="section-subtitle">贡献项目</div>
+            <div class="projects-grid">
+                
+        <div class="project-card">
+            <h3>SmartSql</h3>
+            <span class="project-badge">⚡ ORM框架</span>
+            <p>高性能、可扩展的.NET ORM框架，支持多数据库和动态SQL。</p>
+            <div class="project-links">
+                
+            <a href="https://github.com/dotnetcore/SmartSql" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+                GitHub
+            </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Ant Design Blazor</h3>
+            <span class="project-badge">🎨 UI组件库</span>
+            <p>基于Ant Design的Blazor企业级UI组件库。</p>
+            <div class="project-links">
+                
+            <a href="https://github.com/ant-design-blazor/ant-design-blazor" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+                GitHub
+            </a>
+            </div>
+        </div>
             </div>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <h2 id="skills-title"></h2>
-            <div class="skills-grid" id="skills-grid">
-                <!-- Skills will be populated dynamically -->
+            <h2>技能专长</h2>
+            <div class="skills-grid">
+                
+            <div class="skill-category">
+                <h3>开发技术</h3>
+                <ul class="skill-list">
+                    <li>.NET/C#</li><li>全栈开发</li><li>代码重构</li><li>软件架构</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>DevOps</h3>
+                <ul class="skill-list">
+                    <li>TeamCity</li><li>持续集成</li><li>持续部署</li><li>研发效能</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>管理能力</h3>
+                <ul class="skill-list">
+                    <li>团队组建</li><li>研发管理</li><li>运维管理</li><li>业绩提升</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>AI应用</h3>
+                <ul class="skill-list">
+                    <li>AI辅助开发</li><li>AI驱动项目</li><li>技术创新</li>
+                </ul>
+            </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p id="footer-copyright"></p>
-            <p id="footer-links">
-                <!-- Footer links will be populated dynamically -->
+            <p>© 2025 GMIJ. 保留所有权利。</p>
+            <p>
+                <a href="https://github.com/gmij" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+                GitHub
+            </a> · <a href="/PrivacyStatement" target="_blank" rel="noopener noreferrer">隐私声明</a>
             </p>
         </div>
     </footer>
-    
-    <script>
-        // Global state
-        let currentLang = 'en';
-        let contentData = null;
-        
-        // Note: This page loads content from static JSON files that are part of the repository.
-        // The content is trusted (not user-generated) and maintained by the site owner.
-        // HTML formatting in descriptions (e.g., <strong> tags) is intentional for styling.
-        
-        // GitHub icon SVG
-        const githubIconSVG = `<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-        </svg>`;
-        
-        // Load language data
-        let loadAttempts = 0;
-        async function loadLanguageData(lang) {
-            try {
-                loadAttempts++;
-                const response = await fetch(`./data/${lang}.json`);
-                if (!response.ok) {
-                    throw new Error(`Failed to load ${lang}.json`);
-                }
-                contentData = await response.json();
-                renderPage();
-                loadAttempts = 0; // Reset on success
-            } catch (error) {
-                console.error('Error loading language data:', error);
-                // Fallback to English if current language fails, but prevent infinite recursion
-                if (lang !== 'en' && loadAttempts < 2) {
-                    currentLang = 'en';
-                    loadLanguageData('en');
-                } else {
-                    // Final fallback - show error message
-                    document.getElementById('lang-text').textContent = 'Error';
-                    console.error('Failed to load any language data');
-                }
-            }
-        }
-        
-        // Render page content
-        function renderPage() {
-            if (!contentData) return;
-            
-            // Update meta tags
-            updateMetaTags();
-            
-            // Update header
-            document.getElementById('header-name').textContent = contentData.header.name;
-            document.getElementById('header-tagline').textContent = contentData.header.tagline;
-            document.getElementById('header-subtitle').textContent = contentData.header.subtitle;
-            
-            // Update stats
-            renderStats();
-            
-            // Update about section
-            document.getElementById('about-title').textContent = contentData.about.title;
-            renderAbout();
-            
-            // Update projects section
-            document.getElementById('projects-title').textContent = contentData.projects.title;
-            document.getElementById('projects-lead-title').textContent = contentData.projects.leadTitle;
-            document.getElementById('projects-contributor-title').textContent = contentData.projects.contributorTitle;
-            renderProjects();
-            
-            // Update skills section
-            document.getElementById('skills-title').textContent = contentData.skills.title;
-            renderSkills();
-            
-            // Update footer
-            renderFooter();
-            
-            // Update language button
-            document.getElementById('lang-text').textContent = contentData.ui.langButton;
-        }
-        
-        // Update meta tags
-        function updateMetaTags() {
-            document.title = contentData.meta.title;
-            document.querySelector('meta[name="title"]').setAttribute('content', contentData.meta.title);
-            document.querySelector('meta[name="description"]').setAttribute('content', contentData.meta.description);
-            document.querySelector('meta[name="keywords"]').setAttribute('content', contentData.meta.keywords);
-            document.querySelector('meta[property="og:title"]').setAttribute('content', contentData.meta.title);
-            document.querySelector('meta[property="og:description"]').setAttribute('content', contentData.meta.description);
-            document.querySelector('meta[name="twitter:title"]').setAttribute('content', contentData.meta.title);
-            document.querySelector('meta[name="twitter:description"]').setAttribute('content', contentData.meta.description);
-        }
-        
-        // Render stats
-        function renderStats() {
-            const statsBar = document.getElementById('stats-bar');
-            statsBar.innerHTML = contentData.header.stats.map(stat => `
-                <div class="stat-item">
-                    <span class="stat-number">${stat.number}</span>
-                    <span class="stat-label">${stat.label}</span>
-                </div>
-            `).join('');
-        }
-        
-        // Render about section
-        function renderAbout() {
-            const aboutGrid = document.getElementById('about-grid');
-            aboutGrid.innerHTML = contentData.about.items.map(item => `
-                <div class="about-item">
-                    <h3><span class="about-icon">${item.icon}</span>${item.title}</h3>
-                    <p>${item.description}</p>
-                </div>
-            `).join('');
-        }
-        
-        // Render projects
-        function renderProjects() {
-            // Lead projects
-            const leadGrid = document.getElementById('lead-projects-grid');
-            leadGrid.innerHTML = contentData.projects.leadProjects.map(project => `
-                <div class="project-card">
-                    <h3>${project.name}</h3>
-                    <span class="project-badge">${project.badge}</span>
-                    <p>${project.description}</p>
-                    <div class="project-links">
-                        ${project.github ? `
-                            <a href="${project.github}" class="btn" target="_blank" rel="noopener noreferrer">
-                                ${githubIconSVG}
-                                ${contentData.ui.githubLabel}
-                            </a>
-                        ` : ''}
-                        ${project.website ? `
-                            <a href="${project.website}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                                ${project.websiteLabel}
-                            </a>
-                        ` : ''}
-                    </div>
-                </div>
-            `).join('');
-            
-            // Contributor projects
-            const contributorGrid = document.getElementById('contributor-projects-grid');
-            contributorGrid.innerHTML = contentData.projects.contributorProjects.map(project => `
-                <div class="project-card">
-                    <h3>${project.name}</h3>
-                    <span class="project-badge">${project.badge}</span>
-                    <p>${project.description}</p>
-                    <div class="project-links">
-                        ${project.github ? `
-                            <a href="${project.github}" class="btn" target="_blank" rel="noopener noreferrer">
-                                ${githubIconSVG}
-                                ${contentData.ui.githubLabel}
-                            </a>
-                        ` : ''}
-                    </div>
-                </div>
-            `).join('');
-        }
-        
-        // Render skills
-        function renderSkills() {
-            const skillsGrid = document.getElementById('skills-grid');
-            skillsGrid.innerHTML = contentData.skills.categories.map(category => `
-                <div class="skill-category">
-                    <h3>${category.name}</h3>
-                    <ul class="skill-list">
-                        ${category.items.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>
-            `).join('');
-        }
-        
-        // Render footer
-        function renderFooter() {
-            document.getElementById('footer-copyright').textContent = contentData.footer.copyright;
-            
-            const linksHTML = contentData.footer.links.map((link, index) => {
-                const prefix = index > 0 ? ' · ' : '';
-                if (link.label === contentData.ui.githubLabel) {
-                    return `${prefix}<a href="${link.url}" target="_blank" rel="noopener noreferrer">
-                        ${githubIconSVG}
-                        ${link.label}
-                    </a>`;
-                }
-                return `${prefix}<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`;
-            }).join('');
-            
-            document.getElementById('footer-links').innerHTML = linksHTML;
-        }
-        
-        // Toggle language
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'zh' : 'en';
-            localStorage.setItem('preferredLanguage', currentLang);
-            document.documentElement.setAttribute('lang', currentLang === 'zh' ? 'zh-CN' : 'en');
-            loadLanguageData(currentLang);
-        }
-        
-        // Initialize page
-        (function() {
-            const savedLang = localStorage.getItem('preferredLanguage');
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Determine which language to use
-            if (savedLang) {
-                currentLang = savedLang;
-            } else if (browserLang && browserLang.startsWith('zh')) {
-                currentLang = 'zh';
-            } else {
-                currentLang = 'en';
-            }
-            
-            // Set HTML lang attribute
-            document.documentElement.setAttribute('lang', currentLang === 'zh' ? 'zh-CN' : 'en');
-            
-            // Load content
-            loadLanguageData(currentLang);
-        })();
-    </script>
 </body>
 </html>
