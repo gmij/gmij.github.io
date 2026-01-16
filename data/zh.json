@@ -1,25 +1,29 @@
 {
   "meta": {
-    "title": "GMIJ - 个人介绍",
-    "description": "GMIJ的个人介绍，展示15年.NET开发经验、5年管理经验以及开源项目贡献。",
-    "keywords": "GMIJ, .NET, DevOps, TeamCity, 研发, 管理, 开源, AI项目"
+    "title": "GMIJ - 个人作品集",
+    "description": "GMIJ 的个人作品集，展示了15年的.NET开发经验，5年的管理经验，以及开源项目的贡献。",
+    "keywords": "GMIJ, .NET, DevOps, TeamCity, 开源, 软件开发, 管理, AI项目"
   },
   "header": {
     "name": "GMIJ",
-    "tagline": "资深开发者与管理者",
-    "subtitle": "15年.NET开发经验，5年管理经验，热衷于开源项目和AI驱动的创新。",
+    "tagline": "经验丰富的开发者与管理者",
+    "subtitle": "15年.NET开发经验，5年管理经验，热衷于开源项目贡献。",
     "stats": [
       {
         "number": "15+",
-        "label": "年研发经验"
+        "label": "年开发经验"
       },
       {
         "number": "5+",
         "label": "年管理经验"
       },
       {
-        "number": "2000万",
-        "label": "年运维合同额（人民币）"
+        "number": "20+",
+        "label": "研发团队成员管理"
+      },
+      {
+        "number": "70+",
+        "label": "运维团队成员管理"
       }
     ]
   },
@@ -27,121 +31,133 @@
     "title": "关于我",
     "items": [
       {
-        "icon": "💻",
-        "title": "全栈开发",
-        "description": "15年研发经验（2002-2017），专注.NET开发，全栈工程师，对代码有着一定的精神洁癖，不定期进行重构。"
+        "icon": "code",
+        "title": "开发专长",
+        "description": "15年.NET开发经验（2002-2017）。全栈工程师，注重代码洁癖和定期重构。"
       },
       {
-        "icon": "🚀",
-        "title": "DevOps专家",
-        "description": "熟练掌握DevOps相关知识，擅长使用TeamCity进行持续构建，致力于提升研发效能。"
+        "icon": "settings",
+        "title": "DevOps 知识",
+        "description": "熟练掌握DevOps相关知识，擅长使用TeamCity进行持续集成和部署。"
       },
       {
-        "icon": "👥",
-        "title": "团队管理",
-        "description": "5年管理经验（2017-2023），曾任研发总监（研发团队20人+）、运维总监（驻场运维团队70人+），擅长从0到1组建团队。"
+        "icon": "management",
+        "title": "管理经验",
+        "description": "5年管理经验（2017-2023），曾担任研发总监（20+人团队）和运维总监（70+驻场团队）。"
       },
       {
-        "icon": "📈",
-        "title": "业绩提升",
-        "description": "擅长研发效能改进以及运维管理改进，将年运维合同额从100万提升到近2000万。管理思路：带领团队不断取得胜利。"
+        "icon": "growth",
+        "title": "成就",
+        "description": "通过流程改进和团队效率提升，将年运维合同额从100万提升至近2000万人民币。"
       }
     ]
   },
   "projects": {
-    "title": "开源项目",
-    "leadTitle": "主导项目",
-    "contributorTitle": "贡献项目",
+    "title": "项目",
+    "leadTitle": "我主导的项目",
+    "contributorTitle": "我参与的项目",
     "leadProjects": [
       {
         "name": "DynamicWallpaper",
-        "badge": "⭐ 动态壁纸",
-        "description": "一个功能强大的动态壁纸应用，支持多种壁纸源和自定义设置。",
+        "badge": "AI驱动",
+        "description": "一个AI驱动的动态壁纸项目。",
         "github": "https://github.com/gmij/DynamicWallpaper",
         "website": "https://dw.gmij.win",
         "websiteLabel": "壁纸墙"
       },
       {
         "name": "Audio3A_CSharp",
-        "badge": "🤖 AI编写",
-        "description": "一个完全由AI编写的.NET原生音频3A处理SDK，提供降噪、回声消除等功能。",
+        "badge": "AI编写",
+        "description": "一个完全由AI编写的.NET原生音频3A处理SDK。",
         "github": "https://github.com/gmij/Audio3A_CSharp"
       },
       {
         "name": "绿色软件下载站",
-        "badge": "🤖 AI编写",
-        "description": "一个完全由AI编写的资源下载站，提供绿色软件下载服务。",
+        "badge": "AI编写",
+        "description": "一个完全由AI编写的资源下载站。",
         "github": "https://github.com/gmij/soft",
-        "website": "https://gmij.win/soft",
-        "websiteLabel": "访问网站"
+        "website": "https://soft.gmij.win",
+        "websiteLabel": "绿色软件下载站"
       },
       {
-        "name": "Children Image",
-        "badge": "🤖 AI编写",
-        "description": "AI幼画 - 一个完全由AI编写的儿童手抄报生成器，帮助孩子快速生成精美手抄报。",
+        "name": "Ai幼画",
+        "badge": "AI编写",
+        "description": "一个完全由AI编写的儿童手抄报生成器。",
         "github": "https://github.com/gmij/children_image",
         "website": "https://img.gmij.win",
-        "websiteLabel": "访问网站"
+        "websiteLabel": "AI幼画"
       },
       {
         "name": "ZerotierFix",
-        "badge": "🤖 AI完善",
-        "description": "一个完全由AI完善的ZeroTier安卓客户端，用于个人VPN服务。",
+        "badge": "AI完善",
+        "description": "一个完全由AI完善的ZeroTier安卓客户端，用于个人VPN。",
         "github": "https://github.com/gmij/ZerotierFix"
       }
     ],
     "contributorProjects": [
       {
         "name": "SmartSql",
-        "badge": "⚡ ORM框架",
-        "description": "高性能、可扩展的.NET ORM框架，支持多数据库和动态SQL。",
+        "badge": "开源项目",
+        "description": "一个轻量级、高性能的.NET ORM框架。",
         "github": "https://github.com/dotnetcore/SmartSql"
       },
       {
         "name": "Ant Design Blazor",
-        "badge": "🎨 UI组件库",
-        "description": "基于Ant Design的Blazor企业级UI组件库。",
+        "badge": "开源项目",
+        "description": "一个Ant Design组件的Blazor实现。",
         "github": "https://github.com/ant-design-blazor/ant-design-blazor"
       }
     ]
   },
   "skills": {
-    "title": "技能专长",
+    "title": "技能",
     "categories": [
       {
-        "name": "开发技术",
-        "items": [".NET/C#", "全栈开发", "代码重构", "软件架构"]
+        "name": "开发",
+        "items": [
+          ".NET",
+          "全栈开发",
+          "代码重构"
+        ]
       },
       {
         "name": "DevOps",
-        "items": ["TeamCity", "持续集成", "持续部署", "研发效能"]
+        "items": [
+          "TeamCity",
+          "持续集成",
+          "流程自动化"
+        ]
       },
       {
-        "name": "管理能力",
-        "items": ["团队组建", "研发管理", "运维管理", "业绩提升"]
-      },
-      {
-        "name": "AI应用",
-        "items": ["AI辅助开发", "AI驱动项目", "技术创新"]
+        "name": "管理",
+        "items": [
+          "团队组建",
+          "研发效能改进",
+          "运维管理"
+        ]
       }
     ]
   },
   "footer": {
-    "copyright": "© 2025 GMIJ. 保留所有权利。",
+    "copyright": "© 2023 GMIJ. 版权所有。",
     "links": [
       {
         "label": "GitHub",
         "url": "https://github.com/gmij"
       },
       {
-        "label": "隐私声明",
-        "url": "/PrivacyStatement"
+        "label": "壁纸墙",
+        "url": "https://dw.gmij.win"
+      },
+      {
+        "label": "绿色软件下载站",
+        "url": "https://soft.gmij.win"
       }
     ]
   },
   "ui": {
-    "langButton": "English",
-    "githubLabel": "GitHub",
+    "langButton": "切换到英文",
+    "githubLabel": "在 GitHub 上查看",
     "loading": "加载中..."
   }
 }
