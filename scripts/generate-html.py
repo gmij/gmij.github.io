@@ -484,6 +484,11 @@ def get_html_template(lang_code):
             justify-content: center;
         }}
 
+        .btn-icon svg {{
+            width: 16px;
+            height: 16px;
+        }}
+
         .sr-only {{
             position: absolute;
             width: 1px;
