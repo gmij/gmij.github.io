@@ -29,34 +29,46 @@ def render_stats(stats):
 
 def render_about_items(items):
     """Render about section items"""
+    icon_svgs = {
+        'code': '''<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 9l-4 3 4 3"/><path d="M16 9l4 3-4 3"/><path d="M14 4l-4 16"/></svg>''',
+        'settings': '''<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5h0a1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.5 1z"/></svg>''',
+        'management': '''<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M17 11l2 2 3-3"/><path d="M4 20a5 5 0 0 1 10 0"/><path d="M14 20a4 4 0 0 1 8 0"/></svg>''',
+        'growth': '''<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>'''
+    }
     html = []
     for item in items:
+        icon_html = icon_svgs.get(item.get("icon", ""), "")
         html.append(f'''
             <div class="about-item">
-                <h3><span class="about-icon">{item["icon"]}</span>{escape(item["title"])}</h3>
+                <h3><span class="about-icon">{icon_html}</span>{escape(item["title"])}</h3>
                 <p>{escape(item["description"])}</p>
             </div>''')
     return ''.join(html)
 
 def render_project_card(project, github_label):
     """Render a single project card"""
-    github_icon_svg = '''<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+    github_icon_svg = '''<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>'''
+    demo_icon_svg = '''<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M6 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8h-1v4H6V4h4V3H6z"/>
+        <path d="M9.5 2a.5.5 0 0 0 0 1h2.793L8.146 7.146a.5.5 0 1 0 .708.708L13 3.707V6.5a.5.5 0 0 0 1 0V2H9.5z"/>
     </svg>'''
     
     links = []
     if project.get('github'):
         links.append(f'''
-            <a href="{escape(project['github'])}" class="btn" target="_blank" rel="noopener noreferrer">
+            <a href="{escape(project['github'])}" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="{escape(github_label)}" title="{escape(github_label)}">
                 {github_icon_svg}
-                {escape(github_label)}
+                <span class="sr-only">{escape(github_label)}</span>
             </a>''')
     
     if project.get('website'):
         website_label = project.get('websiteLabel', 'Visit Site')
         links.append(f'''
-            <a href="{escape(project['website'])}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                {escape(website_label)}
+            <a href="{escape(project['website'])}" class="btn btn-primary btn-icon" target="_blank" rel="noopener noreferrer" aria-label="{escape(website_label)}" title="{escape(website_label)}">
+                {demo_icon_svg}
+                <span class="sr-only">{escape(website_label)}</span>
             </a>''')
     
     return f'''
@@ -361,6 +373,9 @@ def get_html_template(lang_code):
         .about-icon {{
             font-size: 28px;
             line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
         }}
         
         .about-item p {{
@@ -455,6 +470,32 @@ def get_html_template(lang_code):
         .btn-primary:hover {{
             background: var(--accent-hover);
             border-color: var(--accent-hover);
+        }}
+
+        .btn-icon {{
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }}
+
+        .btn-icon svg {{
+            width: 16px;
+            height: 16px;
+        }}
+
+        .sr-only {{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }}
         
         /* Skills Section */

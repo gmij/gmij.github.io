@@ -251,6 +251,9 @@
         .about-icon {
             font-size: 28px;
             line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
         }
         
         .about-item p {
@@ -345,6 +348,32 @@
         .btn-primary:hover {
             background: var(--accent-hover);
             border-color: var(--accent-hover);
+        }
+
+        .btn-icon {
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
         
         /* Skills Section */
@@ -523,19 +552,19 @@
             <div class="about-grid">
                 
             <div class="about-item">
-                <h3><span class="about-icon">code</span>Development Expertise</h3>
+                <h3><span class="about-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 9l-4 3 4 3"/><path d="M16 9l4 3-4 3"/><path d="M14 4l-4 16"/></svg></span>Development Expertise</h3>
                 <p>15 years of .NET development experience (2002-2017). A full-stack engineer with a strong focus on clean code and regular refactoring.</p>
             </div>
             <div class="about-item">
-                <h3><span class="about-icon">settings</span>DevOps Knowledge</h3>
+                <h3><span class="about-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5h0a1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.5 1z"/></svg></span>DevOps Knowledge</h3>
                 <p>Proficient in DevOps practices, with expertise in using TeamCity for continuous integration and deployment.</p>
             </div>
             <div class="about-item">
-                <h3><span class="about-icon">management</span>Management Experience</h3>
+                <h3><span class="about-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M17 11l2 2 3-3"/><path d="M4 20a5 5 0 0 1 10 0"/><path d="M14 20a4 4 0 0 1 8 0"/></svg></span>Management Experience</h3>
                 <p>5 years of management experience (2017-2023), including roles as R&amp;D Director (20+ team members) and Operations Director (70+ on-site team members).</p>
             </div>
             <div class="about-item">
-                <h3><span class="about-icon">growth</span>Achievements</h3>
+                <h3><span class="about-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Achievements</h3>
                 <p>Successfully increased annual operations contract value from 1M CNY to nearly 20M CNY through process improvements and team efficiency.</p>
             </div>
             </div>
@@ -555,14 +584,18 @@
             <p>An AI-powered dynamic wallpaper project.</p>
             <div class="project-links">
                 
-            <a href="https://github.com/gmij/DynamicWallpaper" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+            <a href="https://github.com/gmij/DynamicWallpaper" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" title="View on GitHub">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
     </svg>
-                View on GitHub
+                <span class="sr-only">View on GitHub</span>
             </a>
-            <a href="https://dw.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                Wallpaper Wall
+            <a href="https://dw.gmij.win" class="btn btn-primary btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Wallpaper Wall" title="Wallpaper Wall">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M6 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8h-1v4H6V4h4V3H6z"/>
+        <path d="M9.5 2a.5.5 0 0 0 0 1h2.793L8.146 7.146a.5.5 0 1 0 .708.708L13 3.707V6.5a.5.5 0 0 0 1 0V2H9.5z"/>
+    </svg>
+                <span class="sr-only">Wallpaper Wall</span>
             </a>
             </div>
         </div>
@@ -572,11 +605,11 @@
             <p>A .NET-native audio 3A processing SDK fully written by AI.</p>
             <div class="project-links">
                 
-            <a href="https://github.com/gmij/Audio3A_CSharp" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+            <a href="https://github.com/gmij/Audio3A_CSharp" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" title="View on GitHub">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
     </svg>
-                View on GitHub
+                <span class="sr-only">View on GitHub</span>
             </a>
             </div>
         </div>
@@ -586,14 +619,18 @@
             <p>A resource download site fully written by AI.</p>
             <div class="project-links">
                 
-            <a href="https://github.com/gmij/soft" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+            <a href="https://github.com/gmij/soft" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" title="View on GitHub">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
     </svg>
-                View on GitHub
+                <span class="sr-only">View on GitHub</span>
             </a>
-            <a href="https://soft.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                Green Software Download Site
+            <a href="https://soft.gmij.win" class="btn btn-primary btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Green Software Download Site" title="Green Software Download Site">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M6 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8h-1v4H6V4h4V3H6z"/>
+        <path d="M9.5 2a.5.5 0 0 0 0 1h2.793L8.146 7.146a.5.5 0 1 0 .708.708L13 3.707V6.5a.5.5 0 0 0 1 0V2H9.5z"/>
+    </svg>
+                <span class="sr-only">Green Software Download Site</span>
             </a>
             </div>
         </div>
@@ -603,14 +640,18 @@
             <p>An AI-powered generator for children&#x27;s hand-drawn posters.</p>
             <div class="project-links">
                 
-            <a href="https://github.com/gmij/children_image" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+            <a href="https://github.com/gmij/children_image" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" title="View on GitHub">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
     </svg>
-                View on GitHub
+                <span class="sr-only">View on GitHub</span>
             </a>
-            <a href="https://img.gmij.win" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                AI Children&#x27;s Posters
+            <a href="https://img.gmij.win" class="btn btn-primary btn-icon" target="_blank" rel="noopener noreferrer" aria-label="AI Children&#x27;s Posters" title="AI Children&#x27;s Posters">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M6 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8h-1v4H6V4h4V3H6z"/>
+        <path d="M9.5 2a.5.5 0 0 0 0 1h2.793L8.146 7.146a.5.5 0 1 0 .708.708L13 3.707V6.5a.5.5 0 0 0 1 0V2H9.5z"/>
+    </svg>
+                <span class="sr-only">AI Children&#x27;s Posters</span>
             </a>
             </div>
         </div>
@@ -620,11 +661,11 @@
             <p>An AI-enhanced ZeroTier Android client for personal VPN use.</p>
             <div class="project-links">
                 
-            <a href="https://github.com/gmij/ZerotierFix" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+            <a href="https://github.com/gmij/ZerotierFix" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" title="View on GitHub">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
     </svg>
-                View on GitHub
+                <span class="sr-only">View on GitHub</span>
             </a>
             </div>
         </div>
@@ -639,11 +680,11 @@
             <p>A lightweight, high-performance ORM for .NET.</p>
             <div class="project-links">
                 
-            <a href="https://github.com/dotnetcore/SmartSql" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+            <a href="https://github.com/dotnetcore/SmartSql" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" title="View on GitHub">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
     </svg>
-                View on GitHub
+                <span class="sr-only">View on GitHub</span>
             </a>
             </div>
         </div>
@@ -653,11 +694,11 @@
             <p>A Blazor implementation of Ant Design components.</p>
             <div class="project-links">
                 
-            <a href="https://github.com/ant-design-blazor/ant-design-blazor" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+            <a href="https://github.com/ant-design-blazor/ant-design-blazor" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" title="View on GitHub">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
     </svg>
-                View on GitHub
+                <span class="sr-only">View on GitHub</span>
             </a>
             </div>
         </div>
